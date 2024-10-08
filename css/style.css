@@ -1,0 +1,205 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+#content nav{
+    background-color: aliceblue;
+    height: 80px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    box-shadow: 2px solid black;
+}
+
+#content nav .menuButton{
+    width: 80px;
+    height: 80px;
+    text-align: center;
+}
+
+#content nav .menuButton i{
+    font-size: 50px;
+    padding-top: 15px;
+    color: dodgerblue;
+    
+}
+
+#content nav > ul{
+   display: none;
+}
+
+#content nav .logo{
+}
+
+#content nav .logo img{
+    width: 120px;
+    height: 80px;
+}
+
+header{
+    height: 500px;
+    background-color: #fff;
+    background-image: url('../imagens/vecteezy_ai-generated-overhead-view-of-traveler-s-accessories_38234279\ \(1\).jpg');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header #searchContainer{
+    background-color: rgba(255, 166, 0, 0.719);
+    text-align: center;
+    padding: 30px;
+    border-radius: 20px;
+    width: 90%;
+    max-width: 500px;
+}
+
+header #searchContainer h2{
+    color: #fff;
+    font-size: 2em;
+    text-shadow: 2px 2px 2px black;
+    padding-bottom: 30px;
+}
+
+header #searchContainer #search{
+   height: 40px;
+   width: 70%;
+   max-width: 400px;
+   border-radius: 20px;
+   border: none;
+   padding-left: 10px;
+}
+
+header #searchContainer #searchButton{
+    height: 35px;
+    width: 35px;
+    font-size: 20px;
+    color: dodgerblue;
+    text-shadow: 2px 2px 2px black;
+    border-radius: 20px;
+    translate: -45px 2px;
+    border: none;
+}
+
+
+main{
+    background-color: white;
+    width: 100%;
+}
+
+main h2{
+    font-size: 2em;
+    text-align: center;
+    padding: 20px;
+    color: dodgerblue;
+    text-shadow: 2px 2px 2px black;
+}
+
+main section{
+    
+}
+
+main section .bestContainer{
+    
+}
+
+main section .bestContainer .legend{
+    background-color: rgba(0, 128, 0, 0.527);
+
+}
+
+
+
+
+@media screen and (min-width: 800px){
+
+    #content nav{
+       height: 50px;
+
+    }
+
+    #content nav .menuButton{
+        display: none;
+    }
+
+    #content nav ul{
+        display: block;
+        flex-grow: 1;
+        list-style-type: none;
+
+     }
+
+     nav li{
+        width: 20%;
+        float: left;
+        /* inclusão após o sub-menu de produtos*/
+        position: relative;
+
+    }
+
+    nav li ul li{
+        display: none; /*Esconder o sub-menu */
+        background-color:white ;;
+        width: 100%; /* alterado a largura do sub menu*/
+    }
+
+    nav li ul:hover {
+        border: 1px solid black;
+        }
+
+    nav li:hover ul li{
+        display: block; /*Exibir o sub-menu*/
+        }
+
+    nav a{
+        color: dodgerblue;
+        text-decoration: none;
+        line-height: 50px;
+        font-family: "Bebas Neue", sans-serif;
+        font-size: 20px;
+        text-align: center;
+        float: left;
+        width: 100%;
+        border-right: 1px solid #fff;
+    }
+
+        /* Mudar a cor ao passar o mouse sobre */
+        nav a:hover{
+        background-color: dodgerblue;
+        color: white;
+    } 
+
+    #content nav .logo img{
+        width: 120px;
+        height: 50px;
+    }
+
+    main{
+        background-color: white;
+        max-width: 1000px;
+        margin: auto;
+    }
+
+    main section{
+
+    }
+    
+    main section .bestContainer{
+      
+    
+    }
+    
+   
+}
+
+

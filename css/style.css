@@ -23,23 +23,24 @@ body{
 
 #content nav{
     background-color: aliceblue;
-    height: 80px;
+    height: 50px;
     width: 100%;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     box-shadow: 2px solid black;
+    position: fixed;
 }
 
 #content nav .menuButton{
-    width: 80px;
-    height: 80px;
+    width: 50px;
+    height: 50px;
     text-align: center;
 }
 
 #content nav .menuButton i{
-    font-size: 50px;
-    padding-top: 15px;
+    font-size: 35px;
+    padding-top: 10px;
     color: dodgerblue;
     
 }
@@ -53,7 +54,8 @@ body{
 
 #content nav .logo img{
     width: 120px;
-    height: 80px;
+    height: 50px;
+    padding-top: 2px;
 }
 
 header{
@@ -82,6 +84,10 @@ header #searchContainer h2{
     font-size: 2em;
     text-shadow: 2px 2px 2px black;
     padding-bottom: 30px;
+}
+
+#searchBar{
+    padding-left: 40px;
 }
 
 header #searchContainer #search{
@@ -119,15 +125,35 @@ main h2{
 }
 
 main section{
-    
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    border: 1px solid blue;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
 }
 
-main section .bestContainer{
-    
+main section .featuredContent{
+    height: 300px;
+    border: 1px solid black;
+    flex: auto;
+    min-width: 400px;
+    display: flex;
+    align-items: end;
 }
 
-main section .bestContainer .legend{
-    background-color: rgba(0, 128, 0, 0.527);
+main section .featuredContent .legend{
+    background-color: rgba(0, 128, 0, 0.479);
+    height: 30%;
+    width: 100%;
+}
+
+main section .buttonBar{
+    border: 1px solid black;
+}
+
+main section .category{
 
 }
 
@@ -201,16 +227,13 @@ main section .bestContainer .legend{
         background-color: white;
         max-width: 1000px;
         margin: auto;
-    }
-
-    main section{
-
+        margin-top: -40px;
+        border-radius: 20px;
     }
     
-    main section .bestContainer{
-      
     
-    }
+
+    
     
    
 }

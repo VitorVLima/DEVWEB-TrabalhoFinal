@@ -1,4 +1,4 @@
-const category = document.querySelector('#category .category');
+const category = document.querySelector('.category');
 
 // Rolagem com o mouse
 category.addEventListener('wheel', function(event) {

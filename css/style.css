@@ -7,6 +7,7 @@
     box-sizing: border-box;
 }
 
+
 body{
     font-family: Arial, Helvetica, sans-serif;
     background-color: rgb(223, 236, 100);
@@ -175,11 +176,21 @@ main #featured .category .categoryItem{
 }
 
 #category .buttonBar{
-
 }
 
 #category .buttonItem{
-    width: 200px;
+    width: 70px;
+    height: 70px;
+    font-size: 2em;
+    background-color: dodgerblue;
+    color: #fff;
+    text-decoration: none;
+    text-shadow: 2px 2px 2px black;
+    cursor: pointer;
+}
+
+#category .buttonItem:hover{
+    background-color: rgb(22, 101, 180) ;
 }
 
 #category .category{
@@ -216,11 +227,49 @@ height: 50px;
     display: block;
     height: 100%;
     padding: 10px;
+    text-align: center;
 }
-   
+
+#category .itemPlus a:hover{
+   background-color: rgb(22, 101, 180);
+}
+
+
+#allDestinations{
+    padding:0;
+    height: 80px;
+}
+
+#allDestinations h3{
+    background-color: rgba(0, 128, 0, 0.479);
+    height: 100%;
+    width: 100%;
+}
+
+#allDestinations h3 a{
+    height: 100%;
+    width: 100%;
+    color: #fff;
+    text-shadow: 2px 2px 2px black;
+    font-size: 2em;
+    text-decoration: none;
+    display: block;
+    text-align: center;
+    padding-top: 20px;
+}
+
+#allDestinations h3 a:hover{
+    background-color: rgba(3, 78, 3, 0.479);
+}
 
 
 
+footer{
+    background-color: rgb(22, 101, 180);
+    color: white;
+    text-shadow: 2px 2px 2px black;
+    padding: 20px;
+}
 
 
 @media screen and (min-width: 769px){

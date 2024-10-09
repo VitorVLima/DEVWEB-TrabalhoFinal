@@ -9,7 +9,7 @@
 
 body{
     font-family: Arial, Helvetica, sans-serif;
-    background-color: rgb(240, 204, 160);
+    background-color: rgb(223, 236, 100);
 }
 
 .container{
@@ -184,19 +184,41 @@ main #featured .category .categoryItem{
 
 #category .category{
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
     gap: 10px;
-    width: 1000px;
+    width: 100%;
     border: 1px solid red;
+    overflow-x: auto; /* Adiciona rolagem horizontal */
+    overflow: hidden; /* esconde barra de rolagem lateral */
+    white-space: nowrap;
 
 }
 
 #category .categoryItem{
-    height: 300px;
-    width: 300px;
+    height: 200px;
+    width: 200px;
     border: 1px solid black;
+    flex-shrink: 0;
 }
+
+
+#category .itemPlus{
+border: 1px solid black;
+height: 50px;
+}
+
+#category .itemPlus a{
+    background-color: dodgerblue;
+    color: #fff;
+    text-decoration: none;
+    text-shadow: 2px 2px 2px black;
+    display: block;
+    height: 100%;
+    padding: 10px;
+}
+   
+
 
 
 
@@ -278,16 +300,7 @@ main #featured .category .categoryItem{
         
     }
     
-    #category .category{
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-    
-    #category .categoryItem{
-        height: 400px;
-        width: 400px;
-    }
+   
    
 }
 

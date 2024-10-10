@@ -10,7 +10,7 @@
 
 body{
     font-family: Arial, Helvetica, sans-serif;
-    background-color: rgb(223, 236, 100);
+    background-color: rgb(227, 230, 97);
 }
 
 .container{
@@ -207,10 +207,12 @@ main #featured .category .categoryItem{
     align-items: center;
     gap: 10px;
     width: 100%;
-    border: 1px solid red;
+   
     overflow-x: auto; /* Adiciona rolagem horizontal */
     overflow: hidden; /* esconde barra de rolagem lateral */
     white-space: nowrap;
+    border-radius: 10px;
+    
 
 }
 
@@ -218,11 +220,47 @@ main #featured .category .categoryItem{
     display: flex;
 }
 
-#category .categoryItem{
-    height: 200px;
-    width: 200px;
+
+#category .categoryItem img{
+    width: 100%;
+    height: 100px;
+}
+
+#category .categoryItem {
+    min-height: 300px; /* Altura mínima para acomodar o conteúdo */
+    width: 150px;
     border: 1px solid black;
     flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    border-radius: 10px 10px 10px 10px;
+    background-color: #fff;
+    overflow: hidden;
+
+}
+
+#category .categoryItem .itemDescription {
+    padding: 5px;
+  
+    width: 100%;
+    font-size: 0.8em;
+    flex-grow: 1; /* Permite que cresça */
+    display: flex;
+    flex-direction: column; /* Para empilhar elementos */
+    justify-content: flex-start; /* Alinha no início */
+}
+
+#category .categoryItem .itemDescription h3{
+    overflow-wrap: break-word; /* Permite quebra de palavras longas */
+    white-space: normal; /* Permite quebras de linha */
+    text-align: center;
+}
+
+#category .categoryItem .itemDescription p {
+
+    white-space: normal; /* Permite quebras de linha */
+    text-align: justify;
 }
 
 
@@ -358,10 +396,52 @@ height: 50px;
 }
 
 footer{
-    background-color: rgb(22, 101, 180);
+    background-color: rgb(61, 70, 61);
     color: white;
     text-shadow: 2px 2px 2px black;
     padding: 20px;
+    
+
+}
+footer > section{
+    display: flex;
+    justify-content: space-between;
+}
+footer > section .imgfooter{
+    width: 50%;
+    max-width: 200px;
+}
+
+footer > section .imgfooter img{
+    height: 100px;
+    width: 100%;
+}
+
+
+footer > section .midias{
+    height: 100px;
+    width: 50%;
+    font-size: 1.3em;
+    max-width: 200px;
+    text-align: center;
+}
+
+footer > section .midias h3{
+    padding-bottom: 20px;
+}
+
+footer > section .midias .socialIcons{
+    justify-content: center;
+    display: flex;
+    gap: 20px;
+}
+
+footer > section .midias .socialIcons a{
+    color: #fff;
+}
+
+footer p{
+    text-align: center;
 }
 
 

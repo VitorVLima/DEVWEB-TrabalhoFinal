@@ -132,7 +132,7 @@ main h2{
     padding: 20px;
     color: dodgerblue;
     text-shadow: 2px 2px 2px black;
-    border-top:  5px solid #007bff;
+    border-top:  2px solid #007bff9a;
     margin-top: 20px;
     margin-bottom: 20px;
 }
@@ -334,7 +334,7 @@ height: 50px;
     gap: 30px;
     padding: 30px;
     font-family: "Bebas Neue", sans-serif;
-    border:  5px solid #007bff;
+    border:  3px solid #007bff;
 }
 
 .tips h3{

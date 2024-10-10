@@ -141,7 +141,7 @@ main section{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    border: 1px solid blue;
+   
     align-items: center;
     gap: 20px;
     padding: 20px;
@@ -320,7 +320,7 @@ height: 50px;
 }
 
 .tips{
-    background-image: url('../imagens/dicasdesegurança.jpg');
+    background-image: url('../imagens/imagemgaleria1.jpg');
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;

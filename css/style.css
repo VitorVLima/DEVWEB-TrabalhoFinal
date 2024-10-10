@@ -123,6 +123,7 @@ main{
     width: 100%;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.438);
     padding-bottom: 20px;
+    margin-top: -20px;
 }
 
 main h2{
@@ -131,7 +132,7 @@ main h2{
     padding: 20px;
     color: dodgerblue;
     text-shadow: 2px 2px 2px black;
-    border:  5px solid #007bff;
+    border-top:  5px solid #007bff;
     margin-top: 20px;
     margin-bottom: 20px;
 }
@@ -337,7 +338,7 @@ height: 50px;
 }
 
 .tips h3{
-    font-size: 50px;
+    font-size: 40px;
 }
 
 .tips div{
@@ -440,6 +441,10 @@ footer{
       
         min-width: 350px;
         
+    }
+
+    .tips h3{
+        font-size: 50px;
     }
     
    

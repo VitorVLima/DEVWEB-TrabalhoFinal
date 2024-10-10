@@ -320,7 +320,7 @@ height: 50px;
 }
 
 .tips{
-    background-image: url('/imagens/dicasdesegurança.jpg');
+    background-image: url('../imagens/dicasdesegurança.jpg');
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;

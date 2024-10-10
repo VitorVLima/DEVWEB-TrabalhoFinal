@@ -85,17 +85,8 @@
                         </button>
                         <button class="buttonItem" title="Cidades Históricas"><i class="fa-solid fa-landmark-dome"></i></button>
                     </div>
-                    <div class="category" id="mountain">
-                        <div class="categoryItem"></div>
-                        <div class="categoryItem"></div>
-                        <div class="categoryItem"></div>
-                        <div class="categoryItem"></div>
-                        <div class="itemPlus">
-                            <a href="">Veja mais <br><i class="fa-solid fa-plus"></i></a>
-                        </div>
-                    </div>
-                    <div class="category" id="beach">
-                        <div class="categoryItem"></div>
+                    <div class="category mountain">
+                        <div class="categoryItem">montanha</div>
                         <div class="categoryItem"></div>
                         <div class="categoryItem"></div>
                         <div class="categoryItem"></div>
@@ -103,8 +94,8 @@
                             <a href="">Veja mais <br><i class="fa-solid fa-plus"></i></a>
                         </div>
                     </div>
-                    <div class="category" id="family">
-                        <div class="categoryItem"></div>
+                    <div class="category beach">
+                        <div class="categoryItem">praia</div>
                         <div class="categoryItem"></div>
                         <div class="categoryItem"></div>
                         <div class="categoryItem"></div>
@@ -112,8 +103,17 @@
                             <a href="">Veja mais <br><i class="fa-solid fa-plus"></i></a>
                         </div>
                     </div>
-                    <div class="category" id="historicalCity">
+                    <div class="category family">
+                        <div class="categoryItem">familiar</div>
                         <div class="categoryItem"></div>
+                        <div class="categoryItem"></div>
+                        <div class="categoryItem"></div>
+                        <div class="itemPlus">
+                            <a href="">Veja mais <br><i class="fa-solid fa-plus"></i></a>
+                        </div>
+                    </div>
+                    <div class="category historicalCity">
+                        <div class="categoryItem">cidades historicas</div>
                         <div class="categoryItem"></div>
                         <div class="categoryItem"></div>
                         <div class="categoryItem"></div>
@@ -128,9 +128,26 @@
                     <h3><a href="">Todos os destinos</a></h2>
                 </section>
                 <h2>Galeria</h2>
-                <section id="galery">
-
-                </section>
+                <div class="main-image">
+                    <img src="imagens/imagemgaleria1.jpg" alt="Descrição da imagem 1" id="current-image">
+                </div>
+            
+                <div class="gallery">
+                    <img src="imagens/imagemgaleria1.jpg" alt="Descrição da imagem 1" class="thumbnail" onclick="changeImage(this)">
+                    <img src="imagens/imagemgaleria2.jpg" alt="Descrição da imagem 1" class="thumbnail" onclick="changeImage(this)">
+                    <img src="imagens/imagemgaleria3.jpg" alt="Descrição da imagem 2" class="thumbnail" onclick="changeImage(this)">
+                    <div class="thumbnail">
+                        <a href=""><i class="fa-solid fa-plus"></i></a>
+                    </div>
+                    
+                </div>
+                <h2>Dicas para suas Viagens</h2>
+                <div class="tips">
+                    <h3>Quer aproveitar as suas férias ao máximo e se manter seguro e por dentro de todas as atrações? confira nossas dicas. </h3>
+                    <div>
+                        <a href="">Leia mais</a>
+                    </div>
+                </div>
 
             </main>
 
@@ -142,5 +159,7 @@
         </div>
     </div>
 
-    <script src="rolagem-divcategory.js"></script>
+    <script src="js/rolagem-divcategoria.js"></script>
+    <script src="js/galeria.js"></script>
+    <script src="js/botoescategoria.js"></script>
 </html>

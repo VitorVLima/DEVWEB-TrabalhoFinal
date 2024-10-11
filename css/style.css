@@ -19,25 +19,81 @@ body{
 
 #sidebar{
     width: 100%;
-    background-color: #007bff;
+    background-color: #007bff79;
+    font-size: 1.5em;
+    color: #fff;
+    display: none;
+    z-index: 2;
+    position: fixed;
 }
 
-#sidebar i{
-    position: right;float: right;
-    border: 1px solid black;
+#sidebar > i{
+    float: right;
+
+    font-size: 40px;
 }
 
-#sidebar #sidebarItens{
-
+#sidebar > i:hover{
+    color: #0254ac;
 }
 
-#sidebar #sidebarItens{
+#sidebar .sidebarItems{
+    background-color: white;
+    width: 300px;
+    height: 100vh;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.548);
+    padding: 20px;
+    list-style-type: none;
     
 }
 
+#sidebar .sidebarItem{
+    padding-bottom: 10px;
+}
+
+#sidebar .sidebarItem  a{
+
+    color: #007bff;
+    text-shadow: 1px 1px 1px black;
+    text-decoration: none;
+}
+
+#sidebar .sidebarItem  a:hover{
+    color: #0254ac;
+    text-decoration: underline;
+}
+
+#sidebar .sidebarSubItems{
+    padding-top: 10px;
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+}
+
+#sidebar .socialIcon{
+    float: inline-end;
+    padding-top: 300px;
+    color: #007bff;
+    display: flex;
+    gap: 20px;
+    font-size: 40px;
+    text-shadow: 1px 1px 1px black;
+}
+
+#sidebar .socialIcon a{
+
+    color: #007bff;
+}
+
+#sidebar .socialIcon a:hover{
+
+    color: #0254ac;
+}
+
+
 
 #content{
-    display: none;
+    display: block;
     width: 100%;
 }
 
@@ -57,6 +113,11 @@ body{
     width: 60px;
     height: 60px;
     text-align: center;
+    cursor: pointer;
+}
+
+#content nav .menuButton i:hover{
+    color: #0254ac;
 }
 
 #content nav .menuButton i{

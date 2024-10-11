@@ -17,8 +17,27 @@ body{
     display: flex;
 }
 
+#sidebar{
+    width: 100%;
+    background-color: #007bff;
+}
+
+#sidebar i{
+    position: right;float: right;
+    border: 1px solid black;
+}
+
+#sidebar #sidebarItens{
+
+}
+
+#sidebar #sidebarItens{
+    
+}
+
+
 #content{
-    display: block;
+    display: none;
     width: 100%;
 }
 
@@ -446,6 +465,14 @@ footer p{
 
 
 @media screen and (min-width: 769px){
+
+    #sidebar{
+        display: none;
+    }
+    
+    #content{
+        display: block;
+    }
 
     #content nav{
        height: 50px;

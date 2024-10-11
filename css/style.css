@@ -19,7 +19,7 @@ body{
 
 #sidebar{
     width: 100%;
-    background-color: #007bff79;
+    background-color: rgba(0, 0, 0, 0.404);
     font-size: 1.5em;
     color: #fff;
     display: none;
@@ -38,8 +38,9 @@ body{
 }
 
 #sidebar .sidebarItems{
-    background-color: white;
-    width: 300px;
+    background-color: aliceblue;
+    width: 90%;
+    max-width: 300px;
     height: 100vh;
     box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.548);
     padding: 20px;
@@ -48,7 +49,7 @@ body{
 }
 
 #sidebar .sidebarItem{
-    padding-bottom: 10px;
+    border-bottom: 2px solid #007bff;;
 }
 
 #sidebar .sidebarItem  a{
@@ -56,6 +57,10 @@ body{
     color: #007bff;
     text-shadow: 1px 1px 1px black;
     text-decoration: none;
+    display: block;
+    padding-bottom: 10px;
+    padding-top: 5px;
+
 }
 
 #sidebar .sidebarItem  a:hover{
@@ -68,11 +73,16 @@ body{
     display: none;
     flex-direction: column;
     gap: 5px;
+    color: #fff;
+    
+    padding: 20px;
+    border-top: 2px solid #007bff;
+    font-size: 20px;
 }
 
 #sidebar .socialIcon{
     float: inline-end;
-    padding-top: 300px;
+    padding-top: 50px;
     color: #007bff;
     display: flex;
     gap: 20px;

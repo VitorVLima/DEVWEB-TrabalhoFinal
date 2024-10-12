@@ -9,10 +9,15 @@ function loadHTML(elementId, filePath, callback) {
 }
 
 window.onload = function() {
-    loadHTML('iheader', '../estrutura/header.html');
-    loadHTML('isidebar', '../estrutura/sidebar.html', initializeSidebar); // Passa a função de inicialização
-    loadHTML('ifooter', '../estrutura/footer.html');
+    Promise.all([
+        loadHTML('iheader', 'estrutura/header.html'),
+        loadHTML('isidebar', 'estrutura/sidebar.html'),
+        loadHTML('ifooter', 'estrutura/footer.html')
+    ]).then(() => {
+        initializeSidebar(); // Chama a função após todos os arquivos serem carregados
+    }).catch(error => console.error('Erro ao carregar HTML:', error));
 };
+
 
 function initializeSidebar() {
     const menuButton = document.getElementById('menuButton');

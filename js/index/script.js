@@ -9,13 +9,9 @@ function loadHTML(elementId, filePath, callback) {
 }
 
 window.onload = function() {
-    Promise.all([
         loadHTML('iheader', 'estrutura/index/header.html'),
-        loadHTML('isidebar', 'estrutura/index/sidebar.html'),
-        loadHTML('ifooter', 'estrutura/index/footer.html')
-    ]).then(() => {
-        initializeSidebar(); // Chama a função após todos os arquivos serem carregados
-    }).catch(error => console.error('Erro ao carregar HTML:', error));
+        loadHTML('isidebar', 'estrutura/index/sidebar.html', initializeSidebar); // Passa a função de inicialização
+        loadHTML('ifooter', 'estrutura/index/footer.html');
 };
 
 

@@ -9,9 +9,9 @@ function loadHTML(elementId, filePath, callback) {
 }
 
 window.onload = function() {
-    loadHTML('iheader', '/estrutura/header.html');
-    loadHTML('isidebar', '/estrutura/sidebar.html', initializeSidebar); // Passa a função de inicialização
-    loadHTML('ifooter', '/estrutura/footer.html');
+    loadHTML('iheader', 'estrutura/header.html');
+    loadHTML('isidebar', 'estrutura/sidebar.html', initializeSidebar); // Passa a função de inicialização
+    loadHTML('ifooter', 'estrutura/footer.html');
 };
 
 function initializeSidebar() {

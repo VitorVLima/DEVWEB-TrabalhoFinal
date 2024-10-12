@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="shortcut icon" href="/imagens/favicon-removebg-preview.png" type="image/x-icon">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div id="sidebar"> <!-- siderbar para versão mobile, display: none -->
+            <i class="fa-solid fa-xmark" id="closeMenu"></i>
+            <ul class="sidebarItems">
+                <li class="sidebarItem"><a href="#">Home</a></li>
+                <li class="sidebarItem" id="destinos"><a href="#">Destinos</a>
+                <ul class="sidebarSubItems" id="sidebarSubItems">
+                    <li class="sidebarSubItem"><a href="#">Região Norte</a></li>
+                    <li class="sidebarSubItem"><a href="#">Região Sul</a></li>
+                    <li class="sidebarSubItem"><a href="#">Região Nordeste</a></li>
+                    <li class="sidebarSubItem"><a href="#">Região Sudeste</a></li>
+                    <li class="sidebarSubItem"><a href="#">Região Centroeste</a></li>
+                </ul>
+                </li>
+                <li class="sidebarItem"><a href="#">Sobre Nós</a></li>
+                <li class="sidebarItem"><a href="#">Dicas de Viagens</a></li>
+                <li class="sidebarItem"><a href="#">Fale Conosco</a></li>
+                <div class="socialIcon">
+                    <a href=""><i class="fa-brands fa-facebook"></i></a>
+                    <a href=""><i class="fa-brands fa-instagram"></i></a>
+                    <a href=""><i class="fa-brands fa-youtube"></i></a>
+                    <a href=""><i class="fa-brands fa-x-twitter"></i></a>
+                
+                </div>
+            </ul>
+            
+
+        </div>
+
+        <div id="content"> <!-- conteudo do site -->
+            <nav> <!-- Barra de navegação -->
+                <div class="menuButton" id="menuButton"> <!-- botão de menu que abre a sidebar na versão mobile -->
+                    <i class="fa-solid fa-bars"></i>
+                </div>
+                <ul> <!-- versão desktop sera mostrado -->
+                    <li><a href="#" title="Home">Home</a></li>
+                    <li><a href="#" title="Destinos">Destinos</a>
+                    <ul>
+                        <li><a href="#" >Região Norte</a></li>
+                        <li><a href="#" >Região Nordeste</a></li>
+                        <li><a href="#" >Região Sudeste</a></li>
+                        <li><a href="#" >Região Centroeste</a></li>
+                        <li><a href="#" >Região Sul</a></li>
+                    </ul>
+                    </li>
+                    <li><a href="#" title="Sobre nós">Sobre nós</a></li>
+                    <li><a href="#" title="Dicas de viagens">Dicas de Viagens</a></li>
+                    <li><a href="#" title="Fale Conosco">Fale Conosco</a></li>
+                </ul>
+                <div class="logo"> <!-- imagem da logo do site -->
+                    <img src="/imagens/logo-removebg-preview.png" alt="logotipo do site">
+                </div>
+            </nav>
+            <header>
+            
+                <div id="searchContainer">
+                    <h2>Descubra novos Destinos</h2>
+                    <div id="searchBar">
+                        <input type="text" name="search" id="search" placeholder="Destino"> <!-- Barra de pesquisa -->
+                        <button id="searchButton"><i class="fa-solid fa-magnifying-glass"></i></button>
+                    </div>
+                </div>
+
+            </header>
+
+            <main>
+                conteudo teste
+            </main>
+
+            <footer>
+                <section>
+                    <div class="imgfooter">
+                        <img src="/imagens/logo-removebg-preview.png" alt="logo do site">
+                    </div>
+                    <div class="midias">
+                        <h3>Midias sociais</h3>
+                        <div class="socialIcons">
+                            <a href=""><i class="fa-brands fa-facebook"></i></a>
+                            <a href=""><i class="fa-brands fa-instagram"></i></a>
+                            <a href=""><i class="fa-brands fa-youtube"></i></a>
+                            <a href=""><i class="fa-brands fa-x-twitter"></i></a>
+                    
+                        </div>
+                    </div>
+        
+                </section>
+                <p> © 2024 ViagensPeloBrasil - Todos os direitos Reservados</p>
+            </footer>
+
+        </div>
+    </div>
+
+    <script src="js/rolagem-divcategoria.js"></script>
+    <script src="js/galeria.js"></script>
+    <script src="js/botoescategoria.js"></script>
+    <script src="/js/sidebar.js"></script>
+</html>

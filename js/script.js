@@ -39,6 +39,6 @@ function sidebar(){
     });
 }
 
-loadHTML('iheader', 'estrutura/header.html');
-loadHTML('isidebar', 'estrutura/sidebar.html');
-loadHTML('ifooter', 'estrutura/footer.html');
+loadHTML('iheader', '/estrutura/header.html');
+loadHTML('isidebar', '/estrutura/sidebar.html');
+loadHTML('ifooter', '/estrutura/footer.html');

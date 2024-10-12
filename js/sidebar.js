@@ -1,3 +1,5 @@
+document.addEventListener('DOMContentLoaded', function () {
+
 const menuButton = document.getElementById('menuButton');
 const closeMenu = document.getElementById('closeMenu');
 const sidebar = document.getElementById('sidebar');
@@ -32,3 +34,5 @@ window.addEventListener('resize', function() {
     }
 });
 
+
+});

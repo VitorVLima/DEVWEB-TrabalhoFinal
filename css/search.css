@@ -1,0 +1,9 @@
+main .items{
+    padding: 20px;
+    list-style: none;
+}
+
+main .items .item{
+    padding-bottom: 10px;
+    display: none;
+}

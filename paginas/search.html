@@ -4,9 +4,10 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="../css/style.css">
+        <link rel="stylesheet" href="../css/search.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
         <link rel="shortcut icon" href="../imagens/logo-removebg-preview.png" type="image/x-icon">
-        <title>Sobre Nós</title>
+        <title>Resultados de Busca</title>
     </head>
 <body>
     <div class="container">
@@ -22,7 +23,21 @@
 
             <!--main-->
             <main>
-                Conteudo sobrenos
+                <h2>Pesquisar</h2>
+                <h3 id="resultMessage"></h3>
+                <ul class="items">
+                    <li class="item">São Paulo SP</li>
+                    <li class="item">Rio de Janeiro RJ</li>
+                    <li class="item">Belo Horizonte MG</li>
+                    <li class="item">Fortaleza CE</li>
+                    <li class="item">Manaus AM</li>
+                    <li class="item">Ouro Preto MG</li>
+                    <li class="item">Brasilia DF</li>
+                    <li class="item">Natal RN</li>
+                    <li class="item">Recife PE</li>
+                    <li class="item">Gramado RS</li>
+                    <li id="noResults">não há resultados</li>
+                </ul>
             </main>
             <!--/main-->
 
@@ -34,5 +49,6 @@
     </div>
     
 <script src="../js/paginas/script.js"></script>
+<script src="../js/paginas/search.js"></script>
 </body>
 </html>

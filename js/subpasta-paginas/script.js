@@ -9,7 +9,7 @@ function loadHTML(elementId, filePath, callback) {
 }
 
 window.onload = function() {
-        loadHTML('iheader', '../../estrutura/subpasta-paginas/header.html'),
+        loadHTML('iheader', '../../estrutura/subpasta-paginas/header.html' , initializeSearch),
         loadHTML('isidebar', '../../estrutura/subpasta-paginas/sidebar.html', initializeSidebar); // Passa a função de inicialização
         loadHTML('ifooter', '../../estrutura/subpasta-paginas/footer.html');
 };
@@ -46,6 +46,31 @@ function initializeSidebar() {
         if (window.innerWidth > 769) {
             sidebar.style.display = 'none';
             sidebarSubItems.style.display = 'none';
+        }
+    });
+}
+
+function initializeSearch(){
+    const searchButton = document.getElementById('searchButton');
+    const searchInput = document.getElementById('search');
+
+    function redirectToSearch() {
+        const searchValue = searchInput.value.trim();
+        if (searchValue) {
+            // Redireciona para a página de pesquisa com o valor como parâmetro de URL
+            window.location.href = `../../paginas/search.html?query=${encodeURIComponent(searchValue)}`;
+        } else {
+            alert('Digite um time para pesquisar');
+        }
+    }
+
+    // Evento de clique no botão de pesquisa
+    searchButton.addEventListener('click', redirectToSearch);
+
+    // Evento de pressionar a tecla Enter
+    searchInput.addEventListener('keypress', function(event) {
+        if (event.key === 'Enter') {
+            redirectToSearch();
         }
     });
 }

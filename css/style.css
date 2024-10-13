@@ -596,7 +596,7 @@ footer p{
     }
 
         /* Mudar a cor ao passar o mouse sobre */
-        nav a:hover{
+        nav li > a:hover{
         background-color: dodgerblue;
         color: white;
     } 

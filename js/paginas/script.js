@@ -9,10 +9,11 @@ function loadHTML(elementId, filePath, callback) {
 }
 
 window.onload = function() {
-    loadHTML('iheader', '../../estrutura/header.html');
-    loadHTML('isidebar', '../../estrutura/sidebar.html', initializeSidebar); // Passa a função de inicialização
-    loadHTML('ifooter', '../../estrutura/footer.html');
+        loadHTML('iheader', '../estrutura/paginas/header.html'),
+        loadHTML('isidebar', '../estrutura/paginas/sidebar.html', initializeSidebar); // Passa a função de inicialização
+        loadHTML('ifooter', '../estrutura/paginas/footer.html');
 };
+
 
 function initializeSidebar() {
     const menuButton = document.getElementById('menuButton');

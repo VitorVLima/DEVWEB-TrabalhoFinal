@@ -60,7 +60,7 @@ function initializeSearch(){
             // Redireciona para a página de pesquisa com o valor como parâmetro de URL
             window.location.href = `../../paginas/search.html?query=${encodeURIComponent(searchValue)}`;
         } else {
-            alert('Digite um time para pesquisar');
+            alert('Digite um destino para pesquisar');
         }
     }
 

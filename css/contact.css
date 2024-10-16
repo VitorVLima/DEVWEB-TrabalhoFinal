@@ -1,7 +1,14 @@
+main #first{
+    text-align: justify;
+
+}
+
 main .contact{
     display: block;
 
 }
+
+
 
 main .contact h3{
     color: dodgerblue;

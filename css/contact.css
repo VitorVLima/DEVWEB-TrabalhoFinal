@@ -1,0 +1,113 @@
+main .contact{
+    display: block;
+
+}
+
+main .contact h3{
+    color: dodgerblue;
+    text-shadow: 1px 1px 3px black;
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+}
+
+main .info{
+    padding-top: 30px;
+}
+
+main .info .socialIcons{
+    display: flex;
+    gap: 10px;
+    font-size: 2em;
+    padding-bottom: 10px;
+}
+
+main .info .socialIcons a{
+    color: dodgerblue;
+    text-shadow: 1px 1px 3px black;
+}
+
+main .info .socialIcons a:hover{
+    color: rgb(23, 86, 148);
+    text-shadow: 1px 1px 3px black;
+}
+
+
+
+main .contact #right{
+    text-align: right;
+}
+
+form{
+    max-width: 900px;
+    margin: auto;
+    border-radius: 20px;
+    background-color: aliceblue;
+    border: 1px solid dodgerblue;
+    padding: 20px;
+
+}
+
+form .formItem{
+    border: dodgerblue;
+    width: 70%;
+    border-radius: 20px;
+    min-width: 200px;
+    max-width: 400px;
+    padding: 10px;
+}
+
+form #submit{
+    border-radius: 0px;
+    background-color: green;
+    color: white;
+    font-size: 1.5em;
+    cursor: pointer;
+}
+
+form #submit:hover{
+    background-color: darkgreen;
+}
+
+form #submitComment{
+    background-color: green;
+    color: white;
+    font-size: 1.2em;
+    max-width: 200px;
+    cursor: pointer;
+}
+
+form #submitComment:hover{
+    background-color: darkgreen;
+}
+
+.comments-section {
+    margin-top: 20px;
+}
+.comment {
+    border: 1px solid dodgerblue;
+    background-color: aliceblue;
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.comment-Text {
+    font-family: Arial, sans-serif; /* Substitua pela fonte desejada */
+    color: #333; /* Ajuste a cor conforme necessário */
+}
+
+#delete{
+    cursor: pointer;
+    background-color: dodgerblue;
+    color: rgb(241, 244, 247);
+    border-radius: 5px;
+    padding: 5px;
+    text-shadow: 0px 0px 2px black;
+    border: 1px solid dodgerblue;
+}
+

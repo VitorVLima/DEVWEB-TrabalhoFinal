@@ -25,6 +25,7 @@ body{
     display: none;
     z-index: 2;
     position: fixed;
+    transition: max-heigth 2s ease, opacity 2s ease;
 }
 
 #sidebar > i{

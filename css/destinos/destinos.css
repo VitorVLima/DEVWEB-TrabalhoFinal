@@ -12,7 +12,7 @@
 }
 
 main .contentDest{
-    padding: 40px;
+    padding: 20px;
     text-align: justify;
 }
 
@@ -53,4 +53,12 @@ main .link a{
 main .link a:hover{
     background-color: rgb(10, 99, 189);
     text-decoration: underline;
+}
+
+
+@media screen and (min-width:769px){
+    main .contentDest{
+        padding: 40px;
+        text-align: justify;
+    }
 }

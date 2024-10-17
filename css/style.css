@@ -239,17 +239,55 @@ main section{
 
 main #featured .featuredContent{
     height: 300px;
-    border: 1px solid black;
     flex: auto;
     min-width: 100%;
     display: flex;
     align-items: end;
+    transition: transform 0.6s ease-in-out;
+    border-radius: 10px;
+    overflow: hidden;
+}
+.featuredContent a{
+    height: 300px;
+    flex: auto;
+    min-width: 100%;
+    display: flex;
+    align-items: end;
+    border: 1px solid black;
+    border-radius: 10px;
+    color: white;
+    text-shadow: 1px 1px 1px black;
+    text-decoration: none;
+    font-size: 0.8em;
 }
 
+
+.featuredContent:hover{
+    transform: scale(1.02);
+
+}
+.featuredContent p{
+    white-space: normal;
+    text-align: justify;
+}
+
+.featuredContent#featured1{
+    background-image: url('../imagens/destinos/lencoismaranhenses2.jpg'); 
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+   
+
+
+
+
+
 main section .featuredContent .legend{
-    background-color: rgba(0, 128, 0, 0.479);
+    background-color: rgba(13, 14, 13, 0.479);
     height: 30%;
     width: 100%;
+    padding: 10px;
 }
 
 main #featured .buttonBar{
@@ -620,6 +658,19 @@ footer p{
         min-width: 350px;
         
     }
+
+    main #featured .featuredContent#featured1{
+      
+        max-width: 470px;
+        
+    }
+
+    main #featured .featuredContent#featured2{
+      
+        max-width: 470px;
+        
+    }
+
 
     .tips h3{
         font-size: 50px;

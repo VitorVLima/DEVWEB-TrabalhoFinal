@@ -12,15 +12,33 @@
 }
 
 main .contentDest{
-    padding: 20px;
+    padding: 40px;
     text-align: justify;
 }
+
+main .contentDest figure{
+    width: 100%;
+    max-width: 500px;
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+ 
+ }
 
 main .contentDest img{
    width: 100%;
    max-width: 500px;
    margin: auto;
+   margin-top: 20px;
+   margin-bottom: 20px;
+
 }
+
+main .contentDest figcaption{
+    text-align: center;
+    margin-top: -20px;
+    font-size: small;
+ }
 
 main .link a{
     display: block;

@@ -317,13 +317,6 @@ main #featured .category .categoryItem{
 
 }
 
-#category{
-
-}
-
-#category .buttonBar{
-}
-
 #category .buttonItem{
     width: 70px;
     height: 70px;
@@ -356,6 +349,24 @@ main #featured .category .categoryItem{
 
 #category .category.mountain{
     display: flex;
+    border: 1px solid black;
+    padding: 10px;
+}
+
+#category .category.family{
+    border: 1px solid black;
+    padding: 10px;
+}
+
+#category .category.beach{
+
+    border: 1px solid black;
+    padding: 10px;
+}
+
+#category .category.historicalCity{
+    border: 1px solid black;
+    padding: 10px;
 }
 
 
@@ -367,26 +378,45 @@ main #featured .category .categoryItem{
 #category .categoryItem {
     min-height: 300px; /* Altura mínima para acomodar o conteúdo */
     width: 150px;
-    border: 1px solid black;
+
     flex-shrink: 0;
     display: flex;
     flex-direction: column;
     gap: 5px;
     border-radius: 10px 10px 10px 10px;
     background-color: #fff;
-    overflow: hidden;
 
+}
+
+main .category .categoryItem:hover{
+    transform: scale(1.02);
+}
+
+main .category .categoryItem a{
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+    border: 1px solid black;
+    min-height: 300px; /* Altura mínima para acomodar o conteúdo */
+    width: 150px;
+    border-radius: 10px 10px 10px 10px;
+    overflow: hidden;
+    color: black;
 }
 
 #category .categoryItem .itemDescription {
     padding: 5px;
   
     width: 100%;
-    font-size: 0.8em;
+    font-size: 0.7em;
     flex-grow: 1; /* Permite que cresça */
     display: flex;
     flex-direction: column; /* Para empilhar elementos */
     justify-content: flex-start; /* Alinha no início */
+}
+
+#category .categoryItem .itemDescription:hover {
+    text-decoration: underline;
 }
 
 #category .categoryItem .itemDescription h3{
@@ -404,7 +434,7 @@ main #featured .category .categoryItem{
 
 #category .itemPlus{
 border: 1px solid black;
-height: 50px;
+height: 60px;
 }
 
 #category .itemPlus a{

@@ -277,15 +277,25 @@ main #featured .featuredContent{
     background-repeat: no-repeat;
     background-size: cover;
 }
+
+.featuredContent#featured2{
+    background-image: url(''); 
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.featuredContent#featured3{
+    background-image: url(''); 
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
    
-
-
-
-
 
 main section .featuredContent .legend{
     background-color: rgba(13, 14, 13, 0.479);
-    height: 30%;
+    height: 35%;
     width: 100%;
     padding: 10px;
 }

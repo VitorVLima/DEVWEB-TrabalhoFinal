@@ -124,6 +124,8 @@ body{
     height: 60px;
     text-align: center;
     cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+    outline: none;
 }
 
 #content nav .menuButton i:hover{

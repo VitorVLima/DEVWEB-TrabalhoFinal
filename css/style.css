@@ -258,7 +258,7 @@ main #featured .featuredContent{
     color: white;
     text-shadow: 1px 1px 1px black;
     text-decoration: none;
-    font-size: 0.8em;
+    font-size: 0.7em;
 }
 
 
@@ -654,21 +654,33 @@ footer p{
     }
     
     main #featured .featuredContent{
-      
-        min-width: 350px;
-        
+        min-width: 300px;
     }
 
     main #featured .featuredContent#featured1{
       
-        max-width: 470px;
+        max-width: 50%;
         
     }
 
     main #featured .featuredContent#featured2{
       
-        max-width: 470px;
-        
+        max-width: 50%;
+
+    }
+
+    .featuredContent a{
+        height: 300px;
+        flex: auto;
+        min-width: 100%;
+        display: flex;
+        align-items: end;
+        border: 1px solid black;
+        border-radius: 10px;
+        color: white;
+        text-shadow: 1px 1px 1px black;
+        text-decoration: none;
+        font-size: 0.8em;
     }
 
 

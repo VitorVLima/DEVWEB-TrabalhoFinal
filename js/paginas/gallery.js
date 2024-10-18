@@ -1,3 +1,4 @@
+const imagensContainer = document.getElementById('imagens');
 const imagens = [
     { src: '../imagens/galeria/imagemgaleria1.jpg', descricao: 'Cataratas do Iguaçu, Foz do Iguaçu, Paraná.' },
     { src: '../imagens/galeria/imagemgaleria2.jpg', descricao: 'Pelourinho, coração da Bahia e da cultura africana no Brasil.' },
@@ -17,49 +18,72 @@ const imagens = [
     { src: '../imagens/galeria/imagemgaleria16.png', descricao: 'Praia do Antunes em Maragogi, vista aérea.' }
 ];
 
-let indiceAtual = 0;
+let imagemAtualIndex = 0;
 
-function mostrarImagem(src, descricao) {
-    document.getElementById('imagemAtual').src = src;
-    document.getElementById('descricao').textContent = descricao;
-    indiceAtual = imagens.findIndex(img => img.src === src);
+function mostrarImagem(index) {
+    imagemAtualIndex = index;
+    document.getElementById('imagemAtual').src = imagens[index].src;
+    document.getElementById('descricao').innerText = imagens[index].descricao;
+    atualizarMiniaturas();
+    rolarParaMiniatura(index); // Rola para a miniatura correspondente
 }
 
 function trocarImagem(direcao) {
-    indiceAtual += direcao;
-
-    if (indiceAtual < 0) {
-        indiceAtual = imagens.length - 1;
-    } else if (indiceAtual >= imagens.length) {
-        indiceAtual = 0;
+    imagemAtualIndex += direcao;
+    if (imagemAtualIndex < 0) {
+        imagemAtualIndex = imagens.length - 1; // Volta para a última imagem
+    } else if (imagemAtualIndex >= imagens.length) {
+        imagemAtualIndex = 0; // Volta para a primeira imagem
     }
-
-    mostrarImagem(imagens[indiceAtual].src, imagens[indiceAtual].descricao);
+    mostrarImagem(imagemAtualIndex);
 }
 
-// Mostrar a primeira imagem ao carregar
-mostrarImagem(imagens[indiceAtual].src, imagens[indiceAtual].descricao);
-
-const imagensContainer = document.getElementById('imagens');
-
-
-    imagensContainer.addEventListener('wheel', function(event) {
-        event.preventDefault(); // Previne o comportamento padrão da rolagem
-        this.scrollLeft += event.deltaY; // Rola horizontalmente
+function atualizarMiniaturas() {
+    const miniaturas = document.querySelectorAll('.imagens img');
+    miniaturas.forEach((miniatura, index) => {
+        if (index === imagemAtualIndex) {
+            miniatura.classList.add('selecionada');
+        } else {
+            miniatura.classList.remove('selecionada');
+        }
     });
+}
 
-    // Rolagem com o toque
-    let startX;
-    let scrollLeft;
+function rolarParaMiniatura(index) {
+    const miniaturas = document.querySelectorAll('.imagens img');
+    if (miniaturas[index]) {
+        const miniatura = miniaturas[index];
+        const miniaturaOffset = miniatura.offsetLeft; // Posição da miniatura
+        const containerOffset = imagensContainer.offsetWidth / 2; // Centro do container
+        const scrollPosition = miniaturaOffset - containerOffset + (miniatura.offsetWidth / 2); // Centraliza a miniatura
+        imagensContainer.scrollTo({
+            left: scrollPosition,
+            behavior: 'smooth' // Animação suave
+        });
+    }
+}
 
-    imagensContainer.addEventListener('touchstart', function(e) {
-        startX = e.touches[0].pageX - this.offsetLeft;
-        scrollLeft = this.scrollLeft;
-    });
+// Inicializa a primeira imagem
+mostrarImagem(0);
 
-    imagensContainer.addEventListener('touchmove', function(e) {
-        e.preventDefault(); // Previne o comportamento padrão do toque
-        const x = e.touches[0].pageX - this.offsetLeft;
-        const walk = (x - startX) * 2; // Ajuste a sensibilidade
-        this.scrollLeft = scrollLeft - walk;
-    });
+// Rolagem do mouse
+imagensContainer.addEventListener('wheel', function(event) {
+    event.preventDefault(); // Previne o comportamento padrão da rolagem
+    this.scrollLeft += event.deltaY; // Rola horizontalmente
+});
+
+// Rolagem com o toque
+let startX;
+let scrollLeft;
+
+imagensContainer.addEventListener('touchstart', function(e) {
+    startX = e.touches[0].pageX - this.offsetLeft;
+    scrollLeft = this.scrollLeft;
+});
+
+imagensContainer.addEventListener('touchmove', function(e) {
+    e.preventDefault(); // Previne o comportamento padrão do toque
+    const x = e.touches[0].pageX - this.offsetLeft;
+    const walk = (x - startX) * 2; // Ajuste a sensibilidade
+    this.scrollLeft = scrollLeft - walk;
+});

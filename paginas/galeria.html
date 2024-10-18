@@ -26,47 +26,49 @@
                 <h2>Galeria de imagens</h2>
                 <div class="galeria">
                     <div class="imagem-destaque">
-                        <img id="imagemAtual" src="imagem1.jpg" alt="Imagem em Destaque">
-                        <p id="descricao">Descrição da Imagem em Destaque</p>
+                        <div class="imagem-container">
+                            <button id="anterior" class="botao-imagem" onclick="trocarImagem(-1)">&#10094;</button>
+                            <img id="imagemAtual" src="imagem1.jpg" alt="Imagem em Destaque">
+                            <button id="proximo" class="botao-imagem" onclick="trocarImagem(1)">&#10095;</button>
                     </div>
+                    <p id="descricao">Descrição da Imagem em Destaque</p>
                     <div class="miniaturas">
-                        <button id="anterior" onclick="trocarImagem(-1)">&#10094;</button>
                         <div class="imagens" id="imagens">
-                            <img src="../imagens/galeria/imagemgaleria1.jpg" alt="Imagem das Cataratas do Iguaçu, Foz do Iguaçu, Paraná" onclick="mostrarImagem('../imagens/galeria/imagemgaleria1.jpg', 'Cataratas do Iguaçu, Foz do Iguaçu, Paraná.')">
+                            <img src="../imagens/galeria/imagemgaleria1.jpg" loading="lazy" data-index="0" alt="Imagem das Cataratas do Iguaçu, Foz do Iguaçu, Paraná" onclick="mostrarImagem('../imagens/galeria/imagemgaleria1.jpg', 'Cataratas do Iguaçu, Foz do Iguaçu, Paraná.')">
 
-                            <img src="../imagens/galeria/imagemgaleria2.jpg" alt="Imagem do pelourinho" onclick="mostrarImagem('../imagens/galeria/imagemgaleria2.jpg', 'Pelourinho, coração da Bahia e da cultura africana no Brasil.')">
+                            <img src="../imagens/galeria/imagemgaleria2.jpg" loading="lazy" data-index="1" alt="Imagem do pelourinho" onclick="mostrarImagem('../imagens/galeria/imagemgaleria2.jpg', 'Pelourinho, coração da Bahia e da cultura africana no Brasil.')">
 
-                            <img src="../imagens/galeria/imagemgaleria3.jpg" alt="Imagem do Cristo Redentor" onclick="mostrarImagem('../imagens/galeria/imagemgaleria3.jpg', 'Cristo Redentor, maior cartão postal do Brasil.')">
+                            <img src="../imagens/galeria/imagemgaleria3.jpg" loading="lazy" data-index="2" alt="Imagem do Cristo Redentor" onclick="mostrarImagem('../imagens/galeria/imagemgaleria3.jpg', 'Cristo Redentor, maior cartão postal do Brasil.')">
 
-                            <img src="../imagens/galeria/imagemgaleria4.jpg" alt="Imagem do teatro Amazonas" onclick="mostrarImagem('../imagens/galeria/imagemgaleria4.jpg', 'Teatro Amazonas, cartão postal de Manaus.')">
+                            <img src="../imagens/galeria/imagemgaleria4.jpg" loading="lazy" data-index="3" alt="Imagem do teatro Amazonas" onclick="mostrarImagem('../imagens/galeria/imagemgaleria4.jpg', 'Teatro Amazonas, cartão postal de Manaus.')">
 
-                            <img src="../imagens/galeria/imagemgaleria5.jpeg" alt="Imagem monte Roraima" onclick="mostrarImagem('../imagens/galeria/imagemgaleria15.jpeg', 'Monte Roraima, fronteira entre Brasil e Venezuela.')">
+                            <img src="../imagens/galeria/imagemgaleria5.jpeg" loading="lazy" data-index="4" alt="Imagem monte Roraima" onclick="mostrarImagem('../imagens/galeria/imagemgaleria15.jpeg', 'Monte Roraima, fronteira entre Brasil e Venezuela.')">
 
-                            <img src="../imagens/galeria/imagemgaleria6.jpeg" alt="Imagem das piscinas naturais de Porto de Galinhas" onclick="mostrarImagem('../imagens/galeria/imagemgaleria6.jpeg', 'Piscinas naturais de Porto de Galinhas-PE.')">
+                            <img src="../imagens/galeria/imagemgaleria6.jpeg" loading="lazy" data-index="5" alt="Imagem das piscinas naturais de Porto de Galinhas" onclick="mostrarImagem('../imagens/galeria/imagemgaleria6.jpeg', 'Piscinas naturais de Porto de Galinhas-PE.')">
 
-                            <img src="../imagens/galeria/imagemgaleria7.jpg" alt="Imagem cachoeira de Santa Bárbara" onclick="mostrarImagem('../imagens/galeria/imagemgaleria7.jpg', 'Cachoeira de Santa Bárbara na Chapada dos Veadeiros, Goiás.')">
+                            <img src="../imagens/galeria/imagemgaleria7.jpg" loading="lazy" data-index="6" alt="Imagem cachoeira de Santa Bárbara" onclick="mostrarImagem('../imagens/galeria/imagemgaleria7.jpg', 'Cachoeira de Santa Bárbara na Chapada dos Veadeiros, Goiás.')">
 
-                            <img src="../imagens/galeria/imagemgaleria8.jpg" alt="Imagem Complexo de Cavernas Aroe Jari" onclick="mostrarImagem('../imagens/galeria/imagemgaleria8.jpg', 'Caverna Aroe Jari, Chapada dos Guimarães, Mato Grosso.')">
+                            <img src="../imagens/galeria/imagemgaleria8.jpg" loading="lazy" data-index="7" alt="Imagem Complexo de Cavernas Aroe Jari" onclick="mostrarImagem('../imagens/galeria/imagemgaleria8.jpg', 'Caverna Aroe Jari, Chapada dos Guimarães, Mato Grosso.')">
 
-                            <img src="../imagens/galeria/imagemgaleria9.jpg" alt="Imagem Catedral Metropolitana de Brasília, Distrito Federal" onclick="mostrarImagem('../imagens/galeria/imagemgaleria9.jpg', 'Catedral Metropolitana de Brasília, Distrito Federal.')">
+                            <img src="../imagens/galeria/imagemgaleria9.jpg" loading="lazy" data-index="8" alt="Imagem Catedral Metropolitana de Brasília, Distrito Federal" onclick="mostrarImagem('../imagens/galeria/imagemgaleria9.jpg', 'Catedral Metropolitana de Brasília, Distrito Federal.')">
 
-                            <img src="../imagens/galeria/imagemgaleria10.jpg" alt="Imagem de Ouro Preto" onclick="mostrarImagem('../imagens/galeria/imagemgaleria10.jpg', 'Cidade hitórica de Ouro Preto, em Minas Gerais, vista de cima.')">
+                            <img src="../imagens/galeria/imagemgaleria10.jpg" loading="lazy" data-index="9" alt="Imagem de Ouro Preto" onclick="mostrarImagem('../imagens/galeria/imagemgaleria10.jpg', 'Cidade hitórica de Ouro Preto, em Minas Gerais, vista de cima.')">
 
-                            <img src="../imagens/galeria/imagemgaleria11.jpg" alt="Imagem do Jardim Botânico, Curitiba, Paraná" onclick="mostrarImagem('../imagens/galeria/imagemgaleria11.jpg', 'Jardim Botânico, Curitiba, Paraná.')">
+                            <img src="../imagens/galeria/imagemgaleria11.jpg" loading="lazy" data-index="10" alt="Imagem do Jardim Botânico, Curitiba, Paraná" onclick="mostrarImagem('../imagens/galeria/imagemgaleria11.jpg', 'Jardim Botânico, Curitiba, Paraná.')">
 
-                            <img src="../imagens/galeria/imagemgaleria12.jpeg" alt="Imagem do bondinho no pão de açucar" onclick="mostrarImagem('../imagens/galeria/imagemgaleria12.jpeg', 'Pão de Acuçar, localizado às margens da Baía de Guanabara.')">
+                            <img src="../imagens/galeria/imagemgaleria12.jpeg" loading="lazy" data-index="11" alt="Imagem do bondinho no pão de açucar" onclick="mostrarImagem('../imagens/galeria/imagemgaleria12.jpeg', 'Pão de Acuçar, localizado às margens da Baía de Guanabara.')">
 
-                            <img src="../imagens/galeria/imagemgaleria13.jpg" alt="Imagem avenida paulista" onclick="mostrarImagem('../imagens/galeria/imagemgaleria13.jpg', 'Movimentada Avenida Paulista em São Paulo.')">
+                            <img src="../imagens/galeria/imagemgaleria13.jpg" loading="lazy"  data-index="12" alt="Imagem avenida paulista" onclick="mostrarImagem('../imagens/galeria/imagemgaleria13.jpg', 'Movimentada Avenida Paulista em São Paulo.')">
 
-                            <img src="../imagens/galeria/imagemgaleria14.png" alt="Imagem pedra furada jericoacoara" onclick="mostrarImagem('../imagens/galeria/imagemgaleria14.png', 'Famosa pedra furada, de Jericoacoara-CE.')">
+                            <img src="../imagens/galeria/imagemgaleria14.png" loading="lazy" data-index="13" alt="Imagem pedra furada jericoacoara" onclick="mostrarImagem('../imagens/galeria/imagemgaleria14.png', 'Famosa pedra furada, de Jericoacoara-CE.')">
 
-                            <img src="../imagens/galeria/imagemgaleria15.png" alt="imagem praia da pipa" onclick="mostrarImagem('../imagens/galeria/imagemgaleria15.png', 'Praia da Pipa, Localizada em Natal-RN.')">
+                            <img src="../imagens/galeria/imagemgaleria15.png" loading="lazy" data-index="14" alt="imagem praia da pipa" onclick="mostrarImagem('../imagens/galeria/imagemgaleria15.png', 'Praia da Pipa, Localizada em Natal-RN.')">
 
-                            <img src="../imagens/galeria/imagemgaleria16.png" alt="imagem de maragogi" onclick="mostrarImagem('../imagens/galeria/imagemgaleria16.png', 'Praia do Antunes em Maragogi, vista aérea.')">
+                            <img src="../imagens/galeria/imagemgaleria16.png" loading="lazy" data-index="15" alt="imagem de maragogi" onclick="mostrarImagem('../imagens/galeria/imagemgaleria16.png', 'Praia do Antunes em Maragogi, vista aérea.')">
                         </div>
-                        <button id="proximo" onclick="trocarImagem(1)">&#10095;</button>
                     </div>
                 </div>
+            </div>
 
 
             </main>

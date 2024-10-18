@@ -1,17 +1,43 @@
-
 .galeria {
     text-align: center;
 }
 
 .imagem-destaque {
-   
-    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.imagem-container {
+    position: relative; /* Contêiner para posicionar os botões */
+    display: flex;
+    align-items: center;
+}
+
+.botao-imagem {
+    position: absolute;
+    background-color: transparent;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: white; /* Cor dos botões */
+    text-shadow: 2px 2px 2px black;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+#anterior {
+    left: 10px; /* Distância do lado esquerdo */
+}
+
+#proximo {
+    right: 10px; /* Distância do lado direito */
 }
 
 .imagem-destaque img {
     width: 100%;
     max-width: 600px;
-    height: 100%;
+    height: 300px;
 }
 
 .miniaturas {
@@ -27,6 +53,7 @@
     display: flex;
     overflow-x: auto;
 }
+
 .imagens::-webkit-scrollbar {
     display: none; /* Para navegadores WebKit como Chrome e Safari */
 }
@@ -48,11 +75,8 @@
     border-color: #007bff;
 }
 
-button {
-    padding: 10px;
-    background-color: transparent;
-    border: none;
-    font-size: 24px;
-    cursor: pointer;
+.imagens img.selecionada {
+    border-color: #007bff; /* Cor da borda da miniatura selecionada */
+    border-width: 2px;
+    border-style: solid;
 }
-

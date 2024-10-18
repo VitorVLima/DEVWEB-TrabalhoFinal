@@ -156,6 +156,7 @@ body{
 header{
     height: 500px;
     background-color: #fff;
+    background-image: url('../imagens/imageminicio.jpg');
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
@@ -281,15 +282,15 @@ main #featured .featuredContent{
 }
 
 .featuredContent#featured2{
-    background-image: url(''); 
+    background-image: url('../imagens/destinos/fozdoiguacu1.webp'); 
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
 }
 
 .featuredContent#featured3{
-    background-image: url(''); 
-    background-position: center center;
+    background-image: url('../imagens/galeria/imagemgaleria3.jpg'); 
+    background-position: center top;
     background-repeat: no-repeat;
     background-size: cover;
 }

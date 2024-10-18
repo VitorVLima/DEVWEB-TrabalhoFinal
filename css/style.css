@@ -156,7 +156,6 @@ body{
 header{
     height: 500px;
     background-color: #fff;
-    background-image: url('../imagens/imageminicio.jpg');
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;

@@ -10,9 +10,9 @@ function loadHTML(elementId, filePath, callback) {
 
 window.onload = function() {
     Promise.all([
-        loadHTML('iheader', '../estrutura/index/header.html', initializeSearch),
-        loadHTML('isidebar', '../estrutura/index/sidebar.html', initializeSidebar),
-        loadHTML('ifooter', '../estrutura/index/footer.html')
+        loadHTML('iheader', '../estrutura/paginas/header.html', initializeSearch),
+        loadHTML('isidebar', '../estrutura/paginas/sidebar.html', initializeSidebar),
+        loadHTML('ifooter', '../estrutura/paginas/footer.html')
     ]).catch(error => console.error('Erro ao carregar um ou mais elementos:', error));
 };
 

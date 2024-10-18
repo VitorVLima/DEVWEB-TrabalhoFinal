@@ -10,12 +10,11 @@ function loadHTML(elementId, filePath, callback) {
 
 window.onload = function() {
     Promise.all([
-        loadHTML('iheader', '../../estrutura/index/header.html', initializeSearch),
-        loadHTML('isidebar', '../../estrutura/index/sidebar.html', initializeSidebar),
-        loadHTML('ifooter', '../../estrutura/index/footer.html')
+        loadHTML('iheader', '../../estrutura/subpasta-paginas/header.html', initializeSearch),
+        loadHTML('isidebar', '../../estrutura/subpasta-paginas/sidebar.html', initializeSidebar),
+        loadHTML('ifooter', '../../estrutura/subpasta-paginas/footer.html')
     ]).catch(error => console.error('Erro ao carregar um ou mais elementos:', error));
 };
-
 
 function initializeSidebar() {
     const menuButton = document.getElementById('menuButton');

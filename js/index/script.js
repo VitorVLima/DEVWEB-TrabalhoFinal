@@ -70,7 +70,7 @@ function showHeader(index) {
         if (i === index) {
             header.classList.add('active');
             header.style.display = 'flex';
-            setTimeout(() => header.style.opacity = '1', 10);
+            setTimeout(() => header.style.opacity = '1', 1);
         } else {
             header.style.opacity = '0';
             header.classList.remove('active');

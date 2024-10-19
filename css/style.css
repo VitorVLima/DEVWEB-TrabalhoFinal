@@ -23,7 +23,7 @@ body{
     font-size: 1.5em;
     color: #fff;
     display: none;
-    z-index: 2;
+    z-index: 4;
     position: fixed;
     transition: max-heigth 2s ease, opacity 2s ease;
 }
@@ -117,8 +117,11 @@ body{
     justify-content: space-between;
     box-shadow: 2px solid black;
     position: fixed;
-    z-index: 1;
+    position: relative; /* Para que o z-index funcione */
+    z-index: 3; 
+    position: fixed;
 }
+
 
 #content nav .menuButton{
     width: 60px;
@@ -215,7 +218,10 @@ main{
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.438);
     padding-bottom: 20px;
     margin-top: -20px;
+    position: relative; /* Para que o z-index funcione */
+    z-index: 2; 
 }
+
 
 main h2{
     font-size: 2em;
@@ -575,6 +581,7 @@ footer{
 footer > section{
     display: flex;
     justify-content: space-between;
+    padding-bottom: 30px;
 }
 footer > section .imgfooter{
     width: 50%;

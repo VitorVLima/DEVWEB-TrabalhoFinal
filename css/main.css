@@ -9,14 +9,14 @@
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.644);
     color: #fff;
     text-shadow: 2px 2px 2px black;
-    display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    display: none;
+    visibility: hidden; /* Inicialmente escondido 
+    opacity: 0; /* Inicialmente invisível */
     gap: 30px;
     padding: 30px;
     font-family: "Bebas Neue", sans-serif;
@@ -28,8 +28,9 @@
 }
 
 .header.active {
-    display: flex; /* Mostra o header ativo */
+    visibility: visible; 
     opacity: 1; /* Define a opacidade para 1 */
+    display: flex;
 }
 
  #searchContainer{
@@ -75,19 +76,20 @@
 }
 
 .header h3{
-    font-size: 40px;
+    display: inline;
+    font-size: 30px;
+    border: 2px solid black;
 }
 
 
-.header div a{
+.header a{
     color: #fff;
     text-decoration: none;
-    font-size: 30px;
-    border: 2px solid white;
-    padding: 5px;
+    border: 3px solid white;
+    padding: 4px;
 
 }
-.header  div a:hover{
+.header  a:hover{
     background-color: rgba(169, 169, 169, 0.479);
 
 }
@@ -109,5 +111,34 @@
 .header#header4{
     background-color: darkseagreen;
     background-image: url('../imagens/imageminicio.jpg');
+}
+.button {
+    position: absolute; /* Posiciona os botões em relação ao seu contêiner pai */
+    top: 50%; /* Centraliza verticalmente */
+    transform: translateY(-50%); /* Ajusta para centralizar corretamente */
+    background-color: rgba(255, 255, 255, 0.8); /* Fundo branco com leve transparência */
+    border: none; /* Remove a borda padrão */
+    padding: 10px 15px; /* Espaçamento interno */
+    cursor: pointer; /* Muda o cursor para indicar que é clicável */
+    font-size: 16px; /* Tamanho da fonte */
+    border-radius: 5px; /* Bordas arredondadas */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Sombra para dar profundidade */
+    z-index: 10; /* Garante que os botões fiquem acima dos outros elementos */
+    transition: background-color 0.3s, transform 0.3s; /* Transições suaves */
+}
+
+.button:hover {
+    background-color: rgba(255, 255, 255, 1); /* Fundo totalmente branco ao passar o mouse */
+    transform: scale(1.05); /* Leve aumento de tamanho ao passar o mouse */
+}
+
+/* Botão à esquerda */
+#prevButton {
+    left: 10px; /* Alinhado à esquerda */
+}
+
+/* Botão à direita */
+#nextButton {
+    right: 10px; /* Alinhado à direita */
 }
 

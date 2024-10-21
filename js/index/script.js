@@ -1,7 +1,7 @@
 window.onload = function() {
     initializeSidebar();
     initializeSearch();
-    startSlideshow(); // Mover aqui para evitar sobreposição
+    startSlideshow();
 };
 
 function initializeSidebar() {
@@ -16,7 +16,7 @@ function initializeSidebar() {
         return;
     }
 
-    sidebarSubItems.style.display = 'none'; // Esconde subitens no início
+    sidebarSubItems.style.display = 'none';
 
     menuButton.addEventListener('click', function() {
         sidebar.style.display = 'block';
@@ -63,26 +63,49 @@ function initializeSearch() {
 
 let currentHeader = 0;
 const headers = document.querySelectorAll('.header');
+let slideshowInterval;
 
 function showHeader(index) {
     headers.forEach((header, i) => {
         if (i === index) {
+            header.style.visibility = 'visible'; // Torna visível
+            header.style.opacity = '1'; // Torna opaco
             header.classList.add('active');
-            header.style.display = 'flex';
-            setTimeout(() => header.style.opacity = '1', 1);
         } else {
-            header.style.opacity = '0';
+            header.style.opacity = '0'; // Torna transparente
             header.classList.remove('active');
-            header.style.display = 'none';
+            // Aguarda a transição antes de ocultar completamente
+            setTimeout(() => {
+                if (header.style.opacity === '0') {
+                    header.style.visibility = 'hidden'; // Torna invisível
+                }
+            }, 500); // Tempo deve coincidir com a transição de opacidade
         }
     });
 }
 
 function startSlideshow() {
     showHeader(currentHeader);
-    setTimeout(() => {
+    resetSlideshowInterval();
+}
+
+function resetSlideshowInterval() {
+    clearInterval(slideshowInterval);
+    slideshowInterval = setInterval(() => {
         currentHeader = (currentHeader + 1) % headers.length;
         showHeader(currentHeader);
-        startSlideshow();
     }, 7000);
 }
+
+// Botões de navegação
+document.getElementById('nextButton').addEventListener('click', function() {
+    currentHeader = (currentHeader + 1) % headers.length;
+    showHeader(currentHeader);
+    resetSlideshowInterval();
+});
+
+document.getElementById('prevButton').addEventListener('click', function() {
+    currentHeader = (currentHeader - 1 + headers.length) % headers.length;
+    showHeader(currentHeader);
+    resetSlideshowInterval();
+});

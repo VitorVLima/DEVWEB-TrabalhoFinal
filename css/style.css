@@ -168,46 +168,41 @@ header{
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.644);
 }
 
-header #searchContainer{
-    background-color: rgba(255, 166, 0, 0.719);
-    text-align: center;
-    padding: 30px;
-    border-radius: 20px;
-    width: 90%;
-    max-width: 500px;
-    box-shadow: 2px 2px 5px white;
-}
 
-header #searchContainer h2{
+
+header h2{
     color: #fff;
-    font-size: 2em;
+    font-size: 1.5em;
     text-shadow: 2px 2px 2px black;
     padding-bottom: 30px;
+    padding: 20px;
+    text-align: center;
 }
 
 #searchBar{
-    padding-left: 40px;
+    padding-left: 80px;
 }
 
-header #searchContainer #search{
-   height: 40px;
+header #search{
+   height: 50px;
    width: 80%;
-   max-width: 400px;
-   border-radius: 20px;
-   border: none;
+   max-width: 500px;
+   border-radius: 10px;
+   border: 1px solid rgba(0, 0, 0, 0.459);
    padding-left: 10px;
    background-color: aliceblue;
    font-size: 1.3em;
+   box-shadow: 2px 2px 2px black;
 }
 
-header #searchContainer #searchButton{
+header  #searchButton{
     height: 35px;
     width: 35px;
     font-size: 20px;
     color: dodgerblue;
     text-shadow: 2px 2px 2px black;
     border-radius: 20px;
-    translate: -45px 2px;
+    translate: -45px -1px;
     border: none;
     background-color: aliceblue;
 }
@@ -689,6 +684,12 @@ footer p{
         width: 120px;
         height: 50px;
     }
+
+
+    #searchBar{
+        padding-left: 100px;
+    }
+    
 
     main{
         background-color: white;

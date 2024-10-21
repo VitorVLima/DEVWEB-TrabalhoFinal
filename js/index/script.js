@@ -2,7 +2,6 @@ window.onload = function() {
     initializeSidebar();
     initializeSearch();
     startSlideshow(); // Mover aqui para evitar sobreposição
-    initializeTouchSwipe(); // Inicializa o deslizar
 };
 
 function initializeSidebar() {
@@ -86,28 +85,4 @@ function startSlideshow() {
         showHeader(currentHeader);
         startSlideshow();
     }, 7000);
-}
-
-function initializeTouchSwipe() {
-    let startX;
-
-    headers.forEach(header => {
-        header.addEventListener('touchstart', (e) => {
-            startX = e.touches[0].clientX;
-        });
-
-        header.addEventListener('touchmove', (e) => {
-            const moveX = e.touches[0].clientX;
-            const diffX = startX - moveX;
-
-            if (Math.abs(diffX) > 50) {
-                if (diffX > 0) {
-                    currentHeader = (currentHeader + 1) % headers.length;
-                } else {
-                    currentHeader = (currentHeader - 1 + headers.length) % headers.length;
-                }
-                showHeader(currentHeader);
-            }
-        });
-    });
 }

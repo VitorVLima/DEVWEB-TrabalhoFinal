@@ -22,7 +22,7 @@
     font-family: "Bebas Neue", sans-serif;
    
    
-    transition: opacity 3.0s ease; /* Transição suave de 0.5 segundos */
+    transition: opacity 0.5s ease; /* Transição suave de 0.5 segundos */
     position: relative; /* Ou absolute/fixed, dependendo do seu layout */
     z-index: 1; /* Menor z-index */
 }
@@ -37,7 +37,8 @@
     text-align: center;
     padding: 30px;
     height: 90px;
-    width: 100%;
+    width: 80%;
+    max-width: 500px;
     box-shadow: 2px 2px 5px white;
     margin-top: 50px;
 }

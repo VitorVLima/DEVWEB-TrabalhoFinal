@@ -20,59 +20,63 @@
     gap: 30px;
     padding: 30px;
     font-family: "Bebas Neue", sans-serif;
-   
-   
     transition: opacity 0.5s ease; /* Transição suave de 0.5 segundos */
     position: relative; /* Ou absolute/fixed, dependendo do seu layout */
     z-index: 1; /* Menor z-index */
 }
-
-.header.active {
-    visibility: visible; 
-    opacity: 1; /* Define a opacidade para 1 */
-    display: flex;
+#searchContainerMain{
+    position: absolute; /* Posiciona a div absolutamente */
+    top: 25%; /* Ajusta para que fique acima do header (ajuste conforme necessário) */
+    left: 50%; /* Centraliza horizontalmente */
+    transform: translateX(-50%); /* Ajusta a posição para centralizar */
+    z-index: 2;
+    width: 100%;
 }
 
- #searchContainer{
-    background-color: aliceblue;
-    text-align: center;
-    padding: 30px;
-    height: 90px;
-    width: 80%;
-    max-width: 500px;
-    box-shadow: 2px 2px 5px white;
-    margin-top: 50px;
+#searchContainerMain > #searchBar{
+   text-align: center;
+   padding-left: 40px;
 }
 
-#searchContainer h2{
+#searchContainerMain h2{
     color: #fff;
     font-size: 1.5em;
     text-shadow: 2px 2px 2px black;
     padding-bottom: 30px;
+    padding: 20px;
+    text-align: center;
 }
 
+#search{
+    height: 50px;
+    width: 80%;
+    max-width: 500px;
+    border-radius: 10px;
+    border: 1px solid rgba(0, 0, 0, 0.459);
+    padding-left: 10px;
+    background-color: aliceblue;
+    font-size: 1.3em;
+    box-shadow: 2px 2px 2px black;
+    
+ }
 
-#searchContainer #search{
-   height: 40px;
-   width: 80%;
-   max-width: 400px;
-   border-radius: 20px;
-   border: 1px solid dodgerblue;
-   padding-left: 10px;
-   background-color: aliceblue;
-   font-size: 1.3em;
-}
-
-#searchContainer #searchButton{
+ #searchButton{
     height: 35px;
     width: 35px;
     font-size: 20px;
     color: dodgerblue;
     text-shadow: 2px 2px 2px black;
     border-radius: 20px;
-    translate: -45px 2px;
+    translate: -45px -1px;
     border: none;
     background-color: aliceblue;
+}
+
+
+.header.active {
+    visibility: visible; 
+    opacity: 1; /* Define a opacidade para 1 */
+    display: flex;
 }
 
 .header h3{

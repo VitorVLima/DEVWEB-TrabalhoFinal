@@ -146,7 +146,7 @@
     font-size: 16px; /* Tamanho da fonte */
     border-radius: 5px; /* Bordas arredondadas */
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Sombra para dar profundidade */
-    z-index: 10; /* Garante que os botões fiquem acima dos outros elementos */
+    z-index: 3; /* Garante que os botões fiquem acima dos outros elementos */
     transition: background-color 0.3s, transform 0.3s; /* Transições suaves */
 }
 

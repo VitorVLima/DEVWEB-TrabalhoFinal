@@ -2,6 +2,16 @@
     width: 100%;
     border: 1px solid black;
 }
+.welcome h3{
+    position: absolute; /* Posiciona a div absolutamente */
+    top: 10%; /* Ajusta para que fique acima do header (ajuste conforme necessário) */
+    left: 50%; /* Centraliza horizontalmente */
+    transform: translateX(-50%); /* Ajusta a posição para centralizar */
+    z-index: 2;
+    width: 100%;
+    color: #fff;
+    text-shadow: 2px 2px 2px black;
+}
 
 .header{
     height: 500px;
@@ -13,13 +23,13 @@
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.644);
     color: #fff;
     text-shadow: 2px 2px 2px black;
-    flex-direction: row;
+    flex-direction: column-reverse;
+    justify-content: space-between;
     display: none;
     visibility: hidden; /* Inicialmente escondido 
     opacity: 0; /* Inicialmente invisível */
     gap: 30px;
     padding: 30px;
-    font-family: "Bebas Neue", sans-serif;
     transition: opacity 0.5s ease; /* Transição suave de 0.5 segundos */
     position: relative; /* Ou absolute/fixed, dependendo do seu layout */
     z-index: 1; /* Menor z-index */
@@ -81,8 +91,10 @@
 
 .header h3{
     display: inline;
-    font-size: 30px;
-    border: 2px solid black;
+    font-size: 1em;
+  
+    width: 100%;
+    text-align: center;
 }
 
 
@@ -90,11 +102,13 @@
     color: #fff;
     text-decoration: none;
     border: 3px solid white;
+    background-color: dodgerblue;
     padding: 4px;
+    display: inline-block;
 
 }
 .header  a:hover{
-    background-color: rgba(169, 169, 169, 0.479);
+    background-color: rgba(12, 33, 219, 0.904);
 
 }
 
@@ -132,17 +146,24 @@
 }
 
 .button:hover {
-    background-color: rgba(255, 255, 255, 1); /* Fundo totalmente branco ao passar o mouse */
-    transform: scale(1.05); /* Leve aumento de tamanho ao passar o mouse */
+    background-color: rgba(255, 255, 255, 1); 
+    transform: scale(1.05);
 }
 
-/* Botão à esquerda */
+
 #prevButton {
-    left: 10px; /* Alinhado à esquerda */
+    left: 10px; 
 }
 
-/* Botão à direita */
+
 #nextButton {
-    right: 10px; /* Alinhado à direita */
+    right: 10px; 
 }
+
+@media screen and (min-width: 769px){
+    .header h3{
+        padding-bottom: 50px;
+    }
+}
+
 

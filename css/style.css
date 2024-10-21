@@ -10,7 +10,7 @@
 
 body{
     font-family: "Poppins", sans-serif;
-    background-color: rgb(227, 230, 97);
+    background-color: aliceblue(227, 230, 97);
 }
 
 .container{
@@ -212,7 +212,7 @@ header  #searchButton{
 main{
     background-color: white;
     width: 100%;
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.438);
+    box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.438);
     padding-bottom: 20px;
     margin-top: -20px;
     position: relative; /* Para que o z-index funcione */

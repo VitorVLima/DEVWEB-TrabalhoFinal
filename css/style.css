@@ -180,7 +180,7 @@ header h2{
 }
 
 #searchBar{
-    padding-left: 80px;
+    padding-left: 65px;
 }
 
 header #search{
@@ -193,6 +193,7 @@ header #search{
    background-color: aliceblue;
    font-size: 1.3em;
    box-shadow: 2px 2px 2px black;
+   
 }
 
 header  #searchButton{

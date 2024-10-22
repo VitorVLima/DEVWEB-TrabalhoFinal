@@ -355,26 +355,26 @@ main #featured .category .categoryItem{
 
 #category .category.mountain{
     display: flex;
-    box-shadow: inset 2px 2px 50px black;
+    box-shadow: inset 2px 2px 10px black;
     padding: 20px;
     background-color: aliceblue;
 }
 
 #category .category.family{
-    box-shadow: inset 2px 2px 50px black;
+    box-shadow: inset 2px 2px 10px black;
     padding: 20px;
     background-color: aliceblue;
 }
 
 #category .category.beach{
 
-    box-shadow: inset 2px 2px 50px black;
+    box-shadow: inset 2px 2px 10px black;
     padding: 20px;
     background-color: aliceblue;
 }
 
 #category .category.historicalCity{
-    box-shadow: inset 2px 2px 50px black;
+    box-shadow: inset 2px 2px 10px black;
     padding: 20px;
     background-color: aliceblue;
 }

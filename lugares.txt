@@ -1,17 +1,40 @@
 Região Nordeste:
 -Leçóis Maranhenses (MA)
+-Aquiraz-CE
+-Olinda (PE)
+-Porto Seguro (BA)
+-Porto de Galinhas (PE)
+-Praia do Sancho, Fernando de Noronha (PE)
+-Serra da Capivara (PI)
+-Serra da Ibiapaba (CE)
 
 Região Sudeste:
-Rio de Janeiro (RJ)
-Ouro Preto (MG)
+-Rio de Janeiro (RJ)
+-Ouro Preto (MG)
+-Olímpia (SP)
+-Paraty (RJ)
+-Praia de Castelhano, Ilhabela (SP)
+-Praia de Copa Cabana, Rio de Janeiro (RJ)
+-São Luiz da Paraitinga (sp)
+-Serra do Cipó (MG)
+-Tiradentes (MG)
 
 Região Sul:
 -Penha (SC)
 -Foz do Iguaçu (SC)
+-Praia de Jurere, Florianópolis (SC)
+-Serra do Rastro (SC)
 
 Região Centroeste:
--
+-Caldas Novas (GO)
+-Corumba (MS) - a fazer
+-Brasilia (DF) - a fazer
+-Cáceres (MT) - a fazer
+-Bonito (MS) - a fazer
 
 Região Norte:
--Alter do Chão (PA)
--Ilha de Marajó (PA)
+-Serra do Imeri (AM)
+-Alter do Chão (PA) - a fazer
+-Ilha de Marajó (PA) - a fazer
+-Manaus (AM) - a fazer
+-Belém (PA) - a fazer

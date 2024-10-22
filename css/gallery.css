@@ -1,5 +1,10 @@
 .galeria {
     text-align: center;
+    background-color: rgb(125, 129, 133);
+    padding-top: 30px;
+    padding-bottom: 30px;
+    color: aliceblue;
+    text-shadow: 2px 2px 5px black;
 }
 
 .imagem-destaque {
@@ -38,15 +43,18 @@
     width: 100%;
     max-width: 600px;
     height: 300px;
+    box-shadow: 2px 2px 5px black;
 }
 
 .miniaturas {
-    max-width: 900px;
+    max-width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
     margin: auto;
     margin-top: 20px;
+    background-color:rgb(68, 65, 65);
+    padding: 30px;
 }
 
 .imagens {
@@ -79,4 +87,17 @@
     border-color: #007bff; /* Cor da borda da miniatura selecionada */
     border-width: 2px;
     border-style: solid;
+}
+
+.galleryContent{
+    padding: 20px;
+    text-align: justify;
+    padding-bottom: 30px;
+}
+
+.galleryContent h3{
+    color: dodgerblue;
+    text-shadow: 2px 2px 2px black;
+    padding-top: 10px;
+    padding-bottom: 20px;
 }

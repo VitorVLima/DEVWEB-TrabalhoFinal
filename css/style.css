@@ -347,7 +347,7 @@ main #featured .category .categoryItem{
     scroll-behavior: smooth; 
     overflow-x: auto; /* Adiciona rolagem horizontal */
     overflow: hidden; /* esconde barra de rolagem lateral */
-    white-space: nowrap;
+
     border-radius: 10px;
     
 
@@ -411,7 +411,8 @@ main .category .categoryItem a{
     width: 150px;
     border-radius: 10px 10px 10px 10px;
     overflow: hidden;
-    color: black;
+    color: dodgerblue;
+    text-shadow: 1px 1px 1px black;
 }
 
 #category .categoryItem .itemDescription {
@@ -438,7 +439,7 @@ main .category .categoryItem a{
 #category .categoryItem .itemDescription p {
 
     white-space: normal; /* Permite quebras de linha */
-    text-align: justify;
+    text-align: center;
 }
 
 

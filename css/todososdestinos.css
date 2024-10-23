@@ -1,5 +1,5 @@
 main .items{
-    padding: 20px;
+    padding: 10px;
     list-style: none;
 }
 
@@ -15,7 +15,7 @@ main .items .item{
 }
 
 .item .image{
-    height: 150px;
+    height: 120px;
     border: 1px 1px solid black;
 }
 .item .image img{

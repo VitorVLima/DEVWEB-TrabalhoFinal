@@ -10,6 +10,7 @@ main .items .item{
     gap: 20px;
     font-size: small;
     border-bottom: 1px solid dodgerblue;
+    width: 100%;
 }
 
 .item .image{

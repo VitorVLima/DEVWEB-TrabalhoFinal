@@ -1,3 +1,20 @@
+.description h3{
+    color: dodgerblue;
+    text-shadow: 1px 1px 1px black;
+    text-decoration: none;
+    padding-top: 20px;
+    padding-bottom: 10px;
+}
+
+.description {
+    padding: 20px;
+}
+
+.description ul{
+    padding: 20px;
+    list-style-type: none;
+}
+
 main .items{
     padding: 10px;
     list-style: none;

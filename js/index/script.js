@@ -79,7 +79,7 @@ function showHeader(index) {
                 if (header.style.opacity === '0') {
                     header.style.visibility = 'hidden'; // Torna invisível
                 }
-            }, 500); // Tempo deve coincidir com a transição de opacidade
+            }, 500); 
         }
     });
 }

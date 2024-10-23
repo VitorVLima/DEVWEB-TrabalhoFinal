@@ -27,14 +27,14 @@ Região Sul:
 
 Região Centroeste:
 -Caldas Novas (GO)
--Corumba (MS) - a fazer
--Brasilia (DF) - a fazer
--Cáceres (MT) - a fazer
--Bonito (MS) - a fazer
+-Corumba (MS) 
+-Brasilia (DF) 
+-Cáceres (MT) 
+-Bonito (MS) 
 
 Região Norte:
 -Serra do Imeri (AM)
--Alter do Chão (PA) - a fazer
--Ilha de Marajó (PA) - a fazer
--Manaus (AM) - a fazer
--Belém (PA) - a fazer
+-Alter do Chão (PA)
+-Ilha de Marajó (PA) 
+-Manaus (AM) 
+-Belém (PA) 

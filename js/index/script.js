@@ -23,7 +23,7 @@ function initializeSidebar() {
         // Para garantir que a transição funcione, use setTimeout
         setTimeout(() => {
             sidebar.style.opacity = '1'; // Torna a sidebar visível
-        }, 0);
+        }, 50);
     });
 
     closeMenu.addEventListener('click', function() {

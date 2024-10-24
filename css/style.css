@@ -124,7 +124,7 @@ body{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    box-shadow: 2px solid black;
+    box-shadow: 1px  1px 2px rgba(0, 0, 0, 0.411);
     position: fixed;
     position: relative; /* Para que o z-index funcione */
     z-index: 3; 
@@ -663,7 +663,7 @@ footer p{
 
     nav li ul li{
         display: none; /*Esconder o sub-menu */
-        background-color:white ;;
+        background-color:aliceblue ;;
         width: 100%; /* alterado a largura do sub menu*/
     }
 
@@ -673,6 +673,7 @@ footer p{
 
     nav li:hover ul li{
         display: block; /*Exibir o sub-menu*/
+        box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.349);
         }
 
     nav a{
@@ -709,7 +710,7 @@ footer p{
         max-width: 1000px;
         margin: auto;
         margin-top: -60px;
-        border-radius: 20px;
+        
         overflow: hidden;
     }
     

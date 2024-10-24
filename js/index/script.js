@@ -1,7 +1,6 @@
 window.onload = function() {
     initializeSidebar();
     initializeSearch();
-    startSlideshow();
 };
 
 function initializeSidebar() {
@@ -60,52 +59,3 @@ function initializeSearch() {
         }
     });
 }
-
-let currentHeader = 0;
-const headers = document.querySelectorAll('.header');
-let slideshowInterval;
-
-function showHeader(index) {
-    headers.forEach((header, i) => {
-        if (i === index) {
-            header.style.visibility = 'visible'; // Torna visível
-            header.style.opacity = '1'; // Torna opaco
-            header.classList.add('active');
-        } else {
-            header.style.opacity = '0'; // Torna transparente
-            header.classList.remove('active');
-            // Aguarda a transição antes de ocultar completamente
-            setTimeout(() => {
-                if (header.style.opacity === '0') {
-                    header.style.visibility = 'hidden'; // Torna invisível
-                }
-            }, 500); 
-        }
-    });
-}
-
-function startSlideshow() {
-    showHeader(currentHeader);
-    resetSlideshowInterval();
-}
-
-function resetSlideshowInterval() {
-    clearInterval(slideshowInterval);
-    slideshowInterval = setInterval(() => {
-        currentHeader = (currentHeader + 1) % headers.length;
-        showHeader(currentHeader);
-    }, 7000);
-}
-
-// Botões de navegação
-document.getElementById('nextButton').addEventListener('click', function() {
-    currentHeader = (currentHeader + 1) % headers.length;
-    showHeader(currentHeader);
-    resetSlideshowInterval();
-});
-
-document.getElementById('prevButton').addEventListener('click', function() {
-    currentHeader = (currentHeader - 1 + headers.length) % headers.length;
-    showHeader(currentHeader);
-    resetSlideshowInterval();
-});

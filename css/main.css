@@ -83,96 +83,93 @@
     background-color: aliceblue;
 }
 
-
-.header.active {
-    visibility: visible; 
-    opacity: 1; /* Define a opacidade para 1 */
-    display: flex;
-}
-
-.header h3{
-    display: inline;
-    font-size: 1em;
-  
+.swiper {
     width: 100%;
+    height: 500px;
+  }
+  
+  .swiper-slide {
     text-align: center;
-}
- 
-
-.header a{
+    font-size: 18px;
+    background: #fff;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .swiper-slide h3 {
+   margin-top: 430px;
+   font-size: 16px;
+  }
+  
+  .swiper-slide a{
     color: rgb(15, 218, 8);
     text-decoration: none;
     border-radius: 10px;
     padding: 10px;
     font-size: 1.2em;
-    display: inline-block;
     margin: 5px;
-
-}
-.header  a:hover{
+    text-shadow: 2px 2px 2px black;
+  }
+  
+  .swiper-slide a:hover{
     color: rgb(26, 105, 6);
     text-decoration: underline;
-
-}
-
-.header#header1{
+  
+  }
+  
+  .swiper-button-next{
+    color: aliceblue;
+    text-shadow: 1px 1px 1px black;
+    font-weight: 700;
+  }
+  
+  .swiper-button-prev{
+    color: aliceblue;
+    text-shadow: 1px 1px 1px black;
+    font-weight: 700;
+  }
+  
+  .swiper-pagination{
+    margin-bottom: 100px;
+  }
+  
+  #swiper1{
     background-image: url('../imagens/imagemnordeste.png');
-    
-}
-
-.header#header2{
+  }
+  
+  #swiper2{
     background-image: url('../imagens/dicasdesegurança.jpg');
-}
-    
-.header#header3{
-    background-image:url('../imagens/destinos/ouropreto1.jpg');
-   
-}
-
-.header#header4{
-    background-color: darkseagreen;
+  }
+  
+  #swiper3{
+    background-image: url('../imagens/destinos/ouropreto1.jpg');
+  }
+  
+  #swiper4{
     background-image: url('../imagens/imageminicio.jpg');
+  }
+  
+#swiper5{
+    background-image: url('../imagens/destinos/bonito1.JPG');
 }
-.button {
-    position: absolute; /* Posiciona os botões em relação ao seu contêiner pai */
-    top: 40%; /* Centraliza verticalmente */
-    transform: translateY(-50%); /* Ajusta para centralizar corretamente */
-    background-color: rgba(255, 255, 255, 0.8); /* Fundo branco com leve transparência */
-    border: none; /* Remove a borda padrão */
-    padding: 10px 15px; /* Espaçamento interno */
-    cursor: pointer; /* Muda o cursor para indicar que é clicável */
-    font-size: 16px; /* Tamanho da fonte */
-    border-radius: 5px; /* Bordas arredondadas */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Sombra para dar profundidade */
-    z-index: 3; /* Garante que os botões fiquem acima dos outros elementos */
-    transition: background-color 0.3s, transform 0.3s; /* Transições suaves */
-}
-
-.button:hover {
-    background-color: rgba(255, 255, 255, 1); 
-    transform: scale(1.05);
-}
-
-
-#prevButton {
-    left: 10px; 
-}
-
-
-#nextButton {
-    right: 10px; 
-}
+  
 
 @media screen and (min-width: 769px){
-    .header h3{
-        padding-bottom: 70px;
+  
+.swiper-slide h3 {
+    margin-top: 400px;
+    font-size: 16px;
     }
 
-    .header a{
-        margin-left: 30px;
-        font-size: 1.3em;
-        padding: 10px;
-    }
 }
-
-

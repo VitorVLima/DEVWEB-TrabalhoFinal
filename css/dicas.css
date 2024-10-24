@@ -4,4 +4,17 @@
 
 .content h3{
     margin-top: 20px;
+    color: dodgerblue;
+    text-shadow: 1px 1px 1px black;
+}
+
+.content a{
+    color: dodgerblue;
+    text-shadow: 1px 1px 1px black;
+    text-decoration: none;
+}
+
+.content a:hover{
+    color: rgb(8, 45, 82);
+    text-shadow: 1px 1px 1px black;
 }

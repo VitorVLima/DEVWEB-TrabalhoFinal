@@ -18,12 +18,20 @@ function initializeSidebar() {
     sidebarSubItems.style.display = 'none';
 
     menuButton.addEventListener('click', function() {
-        sidebar.style.display = 'block';
+        sidebar.classList.add('show'); // Adiciona a classe para mostrar
+        sidebar.style.display = 'block'; // Garante que a sidebar seja exibida
+        // Para garantir que a transição funcione, use setTimeout
+        setTimeout(() => {
+            sidebar.style.opacity = '1'; // Torna a sidebar visível
+        }, 0);
     });
 
     closeMenu.addEventListener('click', function() {
-        sidebar.style.display = 'none';
-        sidebarSubItems.style.display = 'none';
+        sidebar.style.opacity = '0'; // Esconde com transição
+        setTimeout(() => {
+            sidebar.classList.remove('show'); // Remove a classe após a animação
+            sidebar.style.display = 'none'; // Oculta totalmente
+        }, 500); // Espera o tempo da transição
     });
 
     destinosButton.addEventListener('click', function() {
@@ -32,8 +40,8 @@ function initializeSidebar() {
 
     window.addEventListener('resize', function() {
         if (window.innerWidth > 769) {
-            sidebar.style.display = 'none';
-            sidebarSubItems.style.display = 'none';
+            sidebar.classList.remove('show'); // Remove a classe em telas maiores
+            sidebar.style.display = 'none'; // Oculta totalmente
         }
     });
 }

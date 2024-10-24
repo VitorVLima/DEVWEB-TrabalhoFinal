@@ -12,7 +12,7 @@ body{
     font-family: "Poppins", sans-serif;
     background-color: aliceblue(227, 230, 97);
 }
-
+ 
 .container{
     display: flex;
 }
@@ -25,7 +25,16 @@ body{
     display: none;
     z-index: 4;
     position: fixed;
-    transition: max-heigth 2s ease, opacity 2s ease;
+    opacity: 0;
+    transition: opacity 0.5s ease, transform 0.5s ease; /* Adiciona transição */
+    transform: translateX(-100%); /* Mova a sidebar para fora da tela */
+
+}
+
+#sidebar.show {
+    display: block; /* Mostra a sidebar */
+    opacity: 1;
+    transform: translateX(0); /* Move a sidebar para a posição original */
 }
 
 #sidebar > i{
@@ -512,6 +521,7 @@ main .category .categoryItem a{
     margin: 5px;
     cursor: pointer;
     border: 2px solid transparent;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.425);
     transition: border-color 0.3s;
 }
 

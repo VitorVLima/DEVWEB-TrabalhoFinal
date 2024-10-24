@@ -38,7 +38,7 @@ body`{
 
 #searchContainerMain h2{
     color: #fff;
-    font-size: 1.5em;
+    font-size: 1.2em;
     text-shadow: 2px 2px 2px black;
     padding-bottom: 30px;
     padding: 20px;
@@ -92,7 +92,8 @@ body`{
   
   .swiper-slide h3 {
    margin-top: 430px;
-   font-size: 16px;
+   font-size: 14px;
+   text-align: center;
   }
   
   .swiper-slide a{
@@ -149,6 +150,11 @@ body`{
   
 
 @media screen and (min-width: 769px){
+  #searchContainerMain h2{
+
+    font-size: 1.5em;
+    
+}
   
 .swiper-slide h3 {
     margin-top: 300px;
@@ -158,6 +164,11 @@ body`{
     .swiper-button-next, .swiper-button-prev{
      
       margin-top: 0px;
+    }
+  
+    .swiper-pagination{
+      margin-bottom: 150px;
+  
     }
 
 }

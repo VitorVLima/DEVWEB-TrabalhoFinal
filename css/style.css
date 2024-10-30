@@ -246,10 +246,13 @@ main section{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-   
     align-items: center;
-    gap: 20px;
+    gap: 21px;
     padding: 20px;
+}
+
+#featured{
+    justify-content: center;
 }
 
 main #featured .featuredContent{
@@ -323,6 +326,8 @@ main section .featuredContent .legend{
 #category{
     padding-left: 10px;
     padding-right: 10px;
+    justify-content: start;
+    gap: 10px;
 }
 
 #category .buttonItem{
@@ -336,6 +341,7 @@ main section .featuredContent .legend{
     box-shadow: 2px 2px 5px black;
     border-radius: 10px;
     cursor: pointer;
+    margin-left: 5px;
 }
 
 #category .buttonItem:hover{
@@ -706,7 +712,7 @@ footer p{
 
     main{
         background-color: white;
-        max-width: 1000px;
+        max-width: 1200px;
         margin: auto;
         margin-top: -60px;
         
@@ -741,6 +747,28 @@ footer p{
         text-shadow: 1px 1px 1px black;
         text-decoration: none;
         font-size: 0.8em;
+    }
+
+    #category .categoryItem {
+        min-height: 300px; /* Altura mínima para acomodar o conteúdo */
+        width: 218px;
+    }
+
+        
+    #category .categoryItem img{
+        width: 100%;
+        height: 120px;
+    }
+
+    #category .categoryItem .itemDescription {
+        font-size: 0.8em;
+     
+    }
+
+    .mainGallery p{
+        color: aliceblue;
+        padding: 35px;
+       
     }
 
 

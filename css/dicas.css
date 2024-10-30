@@ -1,11 +1,15 @@
 .content p{
     text-align: justify;
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
 .content h3{
     margin-top: 20px;
     color: dodgerblue;
     text-shadow: 1px 1px 1px black;
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
 .content a{

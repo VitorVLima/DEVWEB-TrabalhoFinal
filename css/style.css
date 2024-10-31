@@ -372,17 +372,18 @@ main section .featuredContent .legend{
 }
  
 #category .category.mountain{
-    display: flex;
     box-shadow: inset 2px 2px 5px black;
     padding: 20px;
     background-color: aliceblue;
+    border: 1px solid rgba(30, 143, 255, 0.568);
     
 }
 
 #category .category.family{
-    box-shadow: inset 2px 2px 10px black;
+    box-shadow: inset 2px 2px 5px black;
     padding: 20px;
     background-color: aliceblue;
+    border: 1px solid rgba(30, 143, 255, 0.568);
 }
 
 .category-container {
@@ -393,15 +394,17 @@ main section .featuredContent .legend{
 
 #category .category.beach{
 
-    box-shadow: inset 2px 2px 10px black;
+    box-shadow: inset 2px 2px 5px black;
     padding: 20px;
     background-color: aliceblue;
+    border: 1px solid rgba(30, 143, 255, 0.568);
 }
 
 #category .category.historicalCity{
-    box-shadow: inset 2px 2px 10px black;
+    box-shadow: inset 2px 2px 5px black;
     padding: 20px;
     background-color: aliceblue;
+    border: 1px solid rgba(30, 143, 255, 0.568);
 }
 
 
@@ -774,7 +777,7 @@ footer p{
 
     #category .categoryItem {
         min-height: 300px; /* Altura mínima para acomodar o conteúdo */
-        width: 205px;
+        width: 219px;
     }
 
         

@@ -34,7 +34,7 @@ categories.forEach(category => {
         // Verifica a direção do movimento
         if (Math.abs(walkX) > Math.abs(walkY)) {
             e.preventDefault(); // Previne a rolagem vertical
-            this.scrollLeft = scrollLeft - (walkX * 2); // Aumenta a sensibilidade da rolagem
+            this.scrollLeft = scrollLeft - (walkX * 5); // Aumenta a sensibilidade da rolagem
         }
     });
 

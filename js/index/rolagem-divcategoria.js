@@ -26,9 +26,9 @@ const categoryContainer = document.getElementsByClassName('category');
             const walkY = (y - startY) * 5; // Sensibilidade para rolagem vertical
 
             // Verifica se o movimento horizontal é maior que o vertical
-            if (Math.abs(walkX) > Math.abs(walkY)) {
+            if (Math.abs(walkX) > Math.abs(walkY) && Math.abs(walkX) > 10) {
                 this.scrollLeft = scrollLeft - walkX; // Rolagem lateral
-            } else {
+            } else if (Math.abs(walkY) > 10) {
                 // Permite a rolagem vertical se a distância vertical for maior
                 this.scrollTop += walkY; // Rolagem vertical, se necessário
             }

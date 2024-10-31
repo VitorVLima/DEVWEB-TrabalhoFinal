@@ -486,7 +486,7 @@ main section .featuredContent .legend{
     width: 100%; /* Ajuste o tamanho da imagem principal */
     max-width: 800px;
     box-shadow: 2px 2px 5px black;
-    height: auto;
+    min-height: 350px;
     max-height: 500px;
     border-radius: 4px;
     display: block;
@@ -518,7 +518,9 @@ main section .featuredContent .legend{
 
 .thumbnail {
     width: 20%;
+    min-width: 90px;
     max-width: 150px; /* Tamanho das imagens menores */
+    height:70px;
     margin: 5px;
     cursor: pointer;
     border: 2px solid transparent;
@@ -537,7 +539,8 @@ main section .featuredContent .legend{
     color: #fff;
     text-shadow: 1px 1px 5px black;
     height: 100%;
-    font-size: 4em;
+    font-size: 2.5em;
+
     text-align: center;
     padding-top: 5px;
 }
@@ -567,14 +570,14 @@ main section .featuredContent .legend{
 
 .tips div{
     text-align: right;
-    margin-top: 200px;
+    
 }
 
 
 .tips div a{
     color: #fff;
     text-decoration: none;
-    font-size: 40px;
+    font-size: 35px;
     border: 4px solid white;
     padding: 5px;
 
@@ -583,9 +586,6 @@ main section .featuredContent .legend{
     background-color: rgba(169, 169, 169, 0.479);
 }
 
-.related{
-    display: flex;
-}
 
 footer{
     background-color: rgb(61, 70, 61);
@@ -787,6 +787,29 @@ footer p{
         display: block;
         margin: auto;
     
+    }
+
+    .thumbnail {
+        width: 20%;
+        max-width: 150px; /* Tamanho das imagens menores */
+        height:110px;
+       
+    }
+
+    .thumbnail a{
+        display: block;
+        background-color: darkgrey;
+        color: #fff;
+        text-shadow: 1px 1px 5px black;
+        height: 100%;
+        font-size: 4em;
+        text-align: center;
+        padding-top: 5px;
+    }
+
+    .tips div{
+        text-align: right;
+        margin-top: 200px;
     }
 
 

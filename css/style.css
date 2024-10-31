@@ -376,6 +376,7 @@ main section .featuredContent .legend{
     padding: 20px;
     background-color: aliceblue;
     border: 1px solid rgba(30, 143, 255, 0.568);
+    display: flex;
     
 }
 

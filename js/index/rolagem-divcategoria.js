@@ -1,11 +1,13 @@
 const categories = document.querySelectorAll('.category');
 
     categories.forEach(category => {
-        // Rolagem com o Mouse
-        category.addEventListener('wheel', function(event) {
-            event.preventDefault(); // Previne o comportamento padrão da rolagem
-            this.scrollLeft += event.deltaY; // Aumenta a sensibilidade da rolagem
-        });
+        // Rolagem com o Mouse apenas em desktop
+        if (!('ontouchstart' in window)) { // Verifica se o dispositivo não é touch
+            category.addEventListener('wheel', function(event) {
+                event.preventDefault(); // Previne o comportamento padrão da rolagem
+                this.scrollLeft += event.deltaY; // Aumenta a sensibilidade da rolagem
+            });
+        }
 
         // Rolagem com o Toque
         let startX;

@@ -31,6 +31,7 @@ function initializeSidebar() {
         setTimeout(() => {
             sidebar.style.display = 'none'; // Oculta totalmente após a animação
         }, 500); // Espera o tempo da transição
+        sidebarSubItems.style.display = 'none';
     });
 
     destinosButton.addEventListener('click', function() {
@@ -42,6 +43,7 @@ function initializeSidebar() {
             sidebar.classList.remove('show'); // Remove a classe em telas maiores
             sidebar.style.display = 'none'; // Oculta totalmente
             sidebar.style.opacity = '1'; // Reseta a opacidade para futuras aberturas
+            sidebarSubItems.style.display = 'none';
         }
     });
 }

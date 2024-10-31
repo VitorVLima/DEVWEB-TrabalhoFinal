@@ -1,27 +1,48 @@
 const categories = document.querySelectorAll('.category');
 
-    categories.forEach(category => {
-        // Rolagem com o Mouse apenas em desktop
-        if (!('ontouchstart' in window)) { // Verifica se o dispositivo não é touch
-            category.addEventListener('wheel', function(event) {
-                event.preventDefault(); // Previne o comportamento padrão da rolagem
-                this.scrollLeft += event.deltaY; // Aumenta a sensibilidade da rolagem
-            });
-        }
-
-        // Rolagem com o Toque
-        let startX;
-        let scrollLeft;
-
-        category.addEventListener('touchstart', function(e) {
-            startX = e.touches[0].pageX - this.offsetLeft;
-            scrollLeft = this.scrollLeft;
+categories.forEach(category => {
+    // Rolagem com o Mouse apenas em desktop
+    if (!('ontouchstart' in window)) { // Verifica se o dispositivo não é touch
+        category.addEventListener('wheel', function(event) {
+            event.preventDefault(); // Previne o comportamento padrão da rolagem
+            this.scrollLeft += event.deltaY; // Aumenta a sensibilidade da rolagem
         });
+    }
 
-        category.addEventListener('touchmove', function(e) {
-            e.preventDefault(); // Previne o comportamento padrão do toque
-            const x = e.touches[0].pageX - this.offsetLeft;
-            const walk = (x - startX) * 2; // Ajuste a sensibilidade da rolagem
-            this.scrollLeft = scrollLeft - walk; // Atualiza a posição de rolagem
-        });
+    // Rolagem com o Toque
+    let startX;
+    let startY;
+    let scrollLeft;
+    let isDragging = false;
+
+    category.addEventListener('touchstart', function(e) {
+        startX = e.touches[0].pageX - this.offsetLeft;
+        startY = e.touches[0].pageY - this.offsetTop;
+        scrollLeft = this.scrollLeft;
+        isDragging = true;
     });
+
+    category.addEventListener('touchmove', function(e) {
+        if (!isDragging) return; // Se não está arrastando, não faz nada
+
+        const x = e.touches[0].pageX - this.offsetLeft;
+        const y = e.touches[0].pageY - this.offsetTop;
+
+        const walkX = x - startX; // Movimento horizontal
+        const walkY = y - startY; // Movimento vertical
+
+        // Verifica a direção do movimento
+        if (Math.abs(walkX) > Math.abs(walkY)) {
+            e.preventDefault(); // Previne a rolagem vertical
+            this.scrollLeft = scrollLeft - walkX; // Atualiza a posição de rolagem horizontal
+        }
+    });
+
+    category.addEventListener('touchend', function() {
+        isDragging = false; // Reseta a flag ao soltar o toque
+    });
+
+    category.addEventListener('touchcancel', function() {
+        isDragging = false; // Reseta a flag se o toque for cancelado
+    });
+});

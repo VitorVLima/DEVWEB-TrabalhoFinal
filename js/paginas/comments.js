@@ -11,7 +11,7 @@ function displayComment(username, commentText) {
     newComment.classList.add('comment');
 
     // Adicionando o username
-    newComment.textContent = `${username}: `;
+    newComment.textContent = ` ${username}: `;
     
     // Criando a quebra de linha e o texto do comentário
     const br = document.createElement('br');

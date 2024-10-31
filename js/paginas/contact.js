@@ -19,5 +19,5 @@ document.getElementById('form').addEventListener('submit', function(event) {
     // Limpa o formulário após salvar
     this.reset();
 
-    alert('Dados salvos com sucesso!');
+    alert('Dados enviados com sucesso!');
 });

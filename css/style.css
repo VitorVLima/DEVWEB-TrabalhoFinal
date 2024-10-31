@@ -12,9 +12,9 @@
 
 body{
     font-family: "Poppins", sans-serif;
-    background-color: aliceblue(227, 230, 97);
+    background-color: aliceblue;
 }
- 
+  
 .container{
     display: flex;
 }
@@ -27,16 +27,14 @@ body{
     display: none;
     z-index: 4;
     position: fixed;
-    opacity: 0;
-    transition: opacity 0.5s ease, transform 0.5s ease; /* Adiciona transição */
-    transform: translateX(-100%); /* Mova a sidebar para fora da tela */
+    transition: left 0.5s ease, opacity 0.5s ease;
+    left: -100%;
 
 }
 
 #sidebar.show {
-    display: block; /* Mostra a sidebar */
     opacity: 1;
-    transform: translateX(0); /* Move a sidebar para a posição original */
+    left: 0;
 }
 
 #sidebar > i{
@@ -489,6 +487,7 @@ main section .featuredContent .legend{
     max-width: 800px;
     box-shadow: 2px 2px 5px black;
     height: auto;
+    max-height: 500px;
     border-radius: 4px;
     display: block;
     margin: auto;
@@ -518,7 +517,8 @@ main section .featuredContent .legend{
 }
 
 .thumbnail {
-    width: 100px; /* Tamanho das imagens menores */
+    width: 20%;
+    max-width: 150px; /* Tamanho das imagens menores */
     margin: 5px;
     cursor: pointer;
     border: 2px solid transparent;
@@ -537,7 +537,7 @@ main section .featuredContent .legend{
     color: #fff;
     text-shadow: 1px 1px 5px black;
     height: 100%;
-    font-size: 3em;
+    font-size: 4em;
     text-align: center;
     padding-top: 5px;
 }
@@ -554,6 +554,7 @@ main section .featuredContent .legend{
     display: flex;
     flex-direction: column;
     justify-content: center;
+    
     gap: 30px;
     padding: 30px;
     font-family: "Bebas Neue", sans-serif;
@@ -564,12 +565,17 @@ main section .featuredContent .legend{
     font-size: 40px;
 }
 
+.tips div{
+    text-align: right;
+    margin-top: 200px;
+}
+
 
 .tips div a{
     color: #fff;
     text-decoration: none;
-    font-size: 30px;
-    border: 2px solid white;
+    font-size: 40px;
+    border: 4px solid white;
     padding: 5px;
 
 }
@@ -768,7 +774,19 @@ footer p{
     .mainGallery p{
         color: aliceblue;
         padding: 35px;
+        font-size: 25px;
        
+    }
+
+    .main-image img {
+        width: 100%; /* Ajuste o tamanho da imagem principal */
+        max-width: 800px;
+        box-shadow: 2px 2px 5px black;
+        height: 500px;
+        border-radius: 4px;
+        display: block;
+        margin: auto;
+    
     }
 
 

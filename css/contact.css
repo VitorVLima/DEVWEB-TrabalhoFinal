@@ -103,9 +103,11 @@ form #submitComment:hover{
 }
 
 
-.comment-Text {
-    font-family: Arial, sans-serif; /* Substitua pela fonte desejada */
-    color: #333; /* Ajuste a cor conforme necessário */
+
+
+.comment{
+    color: rgb(4, 4, 51);
+    font-size: 1.2em;
 }
 
 #delete{

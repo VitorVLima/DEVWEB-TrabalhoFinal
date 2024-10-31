@@ -56,7 +56,9 @@ main .items .item{
 @media screen and (min-width:769px){
     main .items .item{
         font-size: medium;
+        padding-left: 20px;
 }
+
 
 .item .itemDescription h3 {
     padding-bottom: 10px;

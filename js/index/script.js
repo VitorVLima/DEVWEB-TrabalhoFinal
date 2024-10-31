@@ -18,19 +18,18 @@ function initializeSidebar() {
     sidebarSubItems.style.display = 'none';
 
     menuButton.addEventListener('click', function() {
-        sidebar.classList.add('show'); // Adiciona a classe para mostrar
         sidebar.style.display = 'block'; // Garante que a sidebar seja exibida
-        // Para garantir que a transição funcione, use setTimeout
-        setTimeout(() => {
-            sidebar.style.opacity = '1'; // Torna a sidebar visível
-        }, 50);
+        requestAnimationFrame(() => { // Espera um ciclo de renderização para aplicar a animação
+            sidebar.classList.add('show'); // Mostra a sidebar
+            sidebar.style.opacity = '1'; // Garante que a opacidade esteja visível
+        });
     });
 
     closeMenu.addEventListener('click', function() {
-        sidebar.style.opacity = '0'; // Esconde com transição
+        sidebar.classList.remove('show'); // Remove a classe para esconder a sidebar
+        sidebar.style.opacity = '0'; // Inicia a animação de fechamento
         setTimeout(() => {
-            sidebar.classList.remove('show'); // Remove a classe após a animação
-            sidebar.style.display = 'none'; // Oculta totalmente
+            sidebar.style.display = 'none'; // Oculta totalmente após a animação
         }, 500); // Espera o tempo da transição
     });
 
@@ -42,9 +41,13 @@ function initializeSidebar() {
         if (window.innerWidth > 769) {
             sidebar.classList.remove('show'); // Remove a classe em telas maiores
             sidebar.style.display = 'none'; // Oculta totalmente
+            sidebar.style.opacity = '1'; // Reseta a opacidade para futuras aberturas
         }
     });
 }
+
+
+
 
 function initializeSearch() {
     const searchButton = document.getElementById('searchButton');

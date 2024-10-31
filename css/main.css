@@ -122,6 +122,7 @@ body`{
     position: absolute;
     z-index: 3;
     margin-top: 100px;
+    opacity: 0;
   }
   
   .swiper-pagination{
@@ -166,7 +167,7 @@ body`{
     }
 
     .swiper-button-next, .swiper-button-prev{
-     
+      opacity: 1;
       margin-top: 0px;
     }
   
@@ -174,5 +175,7 @@ body`{
       margin-bottom: 150px;
   
     }
+
+   
 
 }

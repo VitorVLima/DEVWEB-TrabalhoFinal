@@ -230,15 +230,20 @@ main{
 
 
     main h2{
-    font-size: 2em;
-    text-align: center;
+        font-size: 2em;
+        font-weight: 800;
+        color: #007bff;
+        font-family: 'Courier New', Courier, monospace;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        border-bottom: 2px dotted rgb(121, 118, 116);
+        text-align: center;
     padding: 20px;
-    color: dodgerblue;
-    text-shadow: 2px 2px 2px black;
-    border-top:  2px solid #007bff9a;
     margin-top: 20px;
     margin-bottom: 20px;
 }
+
+
 
 main section{
     display: flex;
@@ -248,6 +253,9 @@ main section{
     gap: 21px;
     padding: 20px;
 }
+
+
+
 
 #featured{
     justify-content: center;
@@ -474,13 +482,18 @@ main section .featuredContent .legend{
 
 #allDestinations{
     padding:0;
-    height: 80px;
+    height: 70px;
 }
 
 #allDestinations h3{
+    margin: auto;
     background-color: rgba(0, 128, 0, 0.479);
     height: 100%;
-    width: 100%;
+    min-width: 300px;
+    max-width: 400px;
+    width: 40%;
+    border-radius: 20px;
+    box-shadow: 1px 1px 1px rgba(8, 20, 8, 0.589);
 }
 
 #allDestinations h3 a{
@@ -488,11 +501,12 @@ main section .featuredContent .legend{
     width: 100%;
     color: #fff;
     text-shadow: 2px 2px 2px black;
-    font-size: 2em;
+    font-size: 1.5em;
     text-decoration: none;
     display: block;
     text-align: center;
-    padding-top: 10px;
+    padding-top: 15px;
+    border-radius: 20px;
 }
 
 #allDestinations h3 a:hover{

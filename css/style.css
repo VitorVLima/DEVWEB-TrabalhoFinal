@@ -278,6 +278,75 @@ main section{
     padding: 20px;
 }
 
+#firstSection{
+    border: 1px solid black;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.destaque{
+
+    max-width: 600px;
+    text-align: center;
+    padding-bottom: 50px;
+}
+
+.destaque img{
+    width: 100%;
+    height: 300px;
+    margin: auto;
+    border-radius: 10px;
+}
+
+.destaque h4{
+    opacity: 0;    /* Inicialmente invisível */
+    visibility: hidden; /* Para evitar cliques quando invisível */
+    transition: opacity 0.3s ease, visibility 0.3s ease; /* Suaviza a transição */
+}
+
+.img1:hover + .h41{
+    opacity: 1; /* Torna a div visível */
+    visibility: visible; /* Permite interações */
+}
+
+.destaque h4 a{
+    background: linear-gradient(to right, darkorange,  rgb(177, 89, 30));
+    height: 60px;
+    width: 25%;
+    min-width: 150px;
+    color: #fff;
+    text-shadow: 2px 2px 2px black;
+    font-size: 1.5em;
+    text-decoration: none;
+    display: block;
+    margin: auto;
+    padding-top: 10px;
+    border-radius: 20px;
+    box-shadow: 1px 1px 1px rgba(8, 20, 8, 0.589);
+}
+
+.legenda-destaque{
+    color: white;
+    text-shadow: 1px 1px 1px black;
+    font-size: 1.2em;
+    padding-bottom: 20px;
+}
+
+.legenda-destaque h3{
+    padding-bottom: 10px;
+}
+
+.legenda-destaque p{
+    text-align: justify;
+}
+
+.legenda-destaque a{
+    text-decoration: none;
+    color: #007bff;
+    text-shadow: 1px 1px 1px black;
+}
+
 
 
 

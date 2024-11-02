@@ -567,7 +567,8 @@ main section{
 }
 
 .gallery img{
-    max-width: 600px;
+    max-width: 500px;
+    height: 350px;
 }
 
 .mainGallery{
@@ -581,6 +582,7 @@ main section{
     padding: 20px;
     text-align: justify;
     text-shadow: 2px 2px 2px black;
+    font-size: 1.2em;
 }
 
 .mainGallery h2{
@@ -689,7 +691,7 @@ main section{
 }
 
 .tips div a:hover{
-    background-color: rgba(20, 19, 18, 0.76);
+    background: linear-gradient(to right, rgb(70, 41, 7), rgb(177, 89, 30));
 }
 
 
@@ -995,7 +997,9 @@ footer p{
     }
 
     .gallery img{
+        max-width: 600px;
         width: 50%;
+        height: 400px;
         
     }
 

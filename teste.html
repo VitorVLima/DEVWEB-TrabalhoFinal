@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet"href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="shortcut icon" href="imagens/logo-removebg-preview.png" type="image/x-icon">
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/carousel/">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3">
+    <link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet">
+    <title>Página Principal</title>
+</head>
+<body>
+<div class="container">
+    <!-- div sidebar-->
+    <div id="sidebar"> <!-- siderbar para versão mobile, display: none -->
+        <i class="fa-solid fa-xmark" id="closeMenu"></i>
+        <ul class="sidebarItems">
+            <li class="sidebarItem"><a href="index.html">Home</a></li>
+            <li class="sidebarItem" id="destinos"><a href="#">Destinos</a>
+            <ul class="sidebarSubItems" id="sidebarSubItems">
+                <li class="sidebarSubItem"><a href="paginas/regioes/norte.html">Região Norte</a></li>
+                <li class="sidebarSubItem"><a href="paginas/regioes/sul.html">Região Sul</a></li>
+                <li class="sidebarSubItem"><a href="paginas/regioes/nordeste.html">Região Nordeste</a></li>
+                <li class="sidebarSubItem"><a href="paginas/regioes/sudeste.html">Região Sudeste</a></li>
+                <li class="sidebarSubItem"><a href="paginas/regioes/centroeste.html">Região Centroeste</a></li>
+            </ul>
+            </li>
+            <li class="sidebarItem"><a href="paginas/sobrenos.html">Sobre Nós</a></li>
+            <li class="sidebarItem"><a href="paginas/dicasdeviagens.html">Dicas de Viagens</a></li>
+            <li class="sidebarItem"><a href="paginas/faleconosco.html">Fale Conosco</a></li>
+            <li class="sidebarItem"><a href="paginas/galeria.html">Galeria</a></li>
+            <div class="socialIcon">
+                <a href=""><i class="fa-brands fa-facebook"></i></a>
+                <a href=""><i class="fa-brands fa-instagram"></i></a>
+                <a href=""><i class="fa-brands fa-youtube"></i></a>
+                <a href=""><i class="fa-brands fa-x-twitter"></i></a>
+            
+            </div>
+        </ul>
+    </div>
+    <!--/div sidebar-->
+
+    <div id="content">
+    <!--div content-->
+        <!--header-->
+        <nav> <!-- Barra de navegação -->
+            <div class="menuButton" id="menuButton"> <!-- botão de menu que abre a sidebar na versão mobile -->
+                <i class="fa-solid fa-bars"></i>
+            </div>
+            <ul> <!-- versão desktop sera mostrado -->
+                <li><a href="index.html" title="Home">Home</a></li>
+                <li><a href="#" title="Destinos">Destinos</a>
+                <ul>
+                    <li><a href="paginas/regioes/norte.html" >Região Norte</a></li>
+                    <li><a href="paginas/regioes/nordeste.html" >Região Nordeste</a></li>
+                    <li><a href="paginas/regioes/sudeste.html" >Região Sudeste</a></li>
+                    <li><a href="paginas/regioes/centroeste.html" >Região Centroeste</a></li>
+                    <li><a href="paginas/regioes/sul.html" >Região Sul</a></li>
+                </ul>
+                </li>
+                <li><a href="paginas/sobrenos.html" title="Sobre nós">Sobre nós</a></li>
+                <li><a href="paginas/dicasdeviagens.html" title="Dicas de viagens">Dicas de Viagens</a></li>
+                <li><a href="paginas/faleconosco.html" title="Fale Conosco">Fale Conosco</a></li>
+            </ul>
+            <div class="logo"> <!-- imagem da logo do site -->
+                <a href="index.html"><img src="imagens/logo-removebg-preview.png" alt="logotipo do site"></a>
+            </div>
+        </nav>
+        <div class="welcome">
+            <h3>Bem vindos ao Viagens pelo Brasil</h3>
+        </div>
+        <div id="searchContainerMain">
+            <h2>Descubra o próximo destino para passar suas férias</h2>
+            <div id="searchBar">
+                <input type="text" name="search" id="search" placeholder="Destino"> <!-- Barra de pesquisa -->
+                <button id="searchButton"><i class="fa-solid fa-magnifying-glass"></i></button>
+            </div>
+        </div>
+
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide" id="swiper1">
+                <h3><a href="paginas/regioes/nordeste.html">Venha conhecer as maravilhas naturais do nordeste brasileiro</a></h3>
+              </div>
+        
+              <div class="swiper-slide" id="swiper2">
+                <h3><a href="paginas/dicasdeviagens.html">Saiba tudo sobre como se proteger e garantir segurança nas suas viagens </a></h3>
+              </div>
+        
+              <div class="swiper-slide" id="swiper3">
+                <h3><a href="paginas/destinos/ouropretomg.html">Venha descobrir tudo sobre a encantadora cidade de Ouro Preto!</a></h3>
+              </div>
+        
+              <div class="swiper-slide" id="swiper4">
+                <h3><a href="paginas/galeria.html">Confira as imagens dos principais pontos turísticos para se visitar nestas férias</a> </h3>
+              </div>
+        
+              <div class="swiper-slide" id="swiper5">
+                <h3><a href="paginas/destinos/bonitoms.html">Clique e descubra as maravilhas de Bonito, MS, um destino imperdível para os amantes da natureza!</a> </h3>
+              </div>
+        
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-pagination"></div>
+          </div>
+       
+        
+        <!--/header-->
+
+        <!--main-->
+          <main>
+            <div class="container marketing">
+
+                <!-- Three columns of text below the carousel -->
+                <div class="row">
+                  <div class="col-lg-4">
+                    <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="var(--bs-secondary-color)"/></svg>
+                    <h2 class="fw-normal">Heading</h2>
+                    <p>Some representative placeholder content for the three columns of text below the carousel. This is the first column.</p>
+                    <p><a class="btn btn-secondary" href="#">View details &raquo;</a></p>
+                  </div><!-- /.col-lg-4 -->
+                  <div class="col-lg-4">
+                    <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="var(--bs-secondary-color)"/></svg>
+                    <h2 class="fw-normal">Heading</h2>
+                    <p>Another exciting bit of representative placeholder content. This time, we've moved on to the second column.</p>
+                    <p><a class="btn btn-secondary" href="#">View details &raquo;</a></p>
+                  </div><!-- /.col-lg-4 -->
+                  <div class="col-lg-4">
+                    <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="var(--bs-secondary-color)"/></svg>
+                    <h2 class="fw-normal">Heading</h2>
+                    <p>And lastly this, the third column of representative placeholder content.</p>
+                    <p><a class="btn btn-secondary" href="#">View details &raquo;</a></p>
+                  </div><!-- /.col-lg-4 -->
+                </div><!-- /.row -->
+            
+            
+                <!-- START THE FEATURETTES -->
+            
+                <hr class="featurette-divider">
+            
+                <div class="row featurette">
+                  <div class="col-md-7">
+                    <h2 class="featurette-heading fw-normal lh-1">First featurette heading. <span class="text-body-secondary">It’ll blow your mind.</span></h2>
+                    <p class="lead">Some great placeholder content for the first featurette here. Imagine some exciting prose here.</p>
+                  </div>
+                  <div class="col-md-5">
+                    <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="var(--bs-secondary-bg)"/><text x="50%" y="50%" fill="var(--bs-secondary-color)" dy=".3em">500x500</text></svg>
+                  </div>
+                </div>
+            
+                <hr class="featurette-divider">
+            
+                <div class="row featurette">
+                  <div class="col-md-7 order-md-2">
+                    <h2 class="featurette-heading fw-normal lh-1">Oh yeah, it’s that good. <span class="text-body-secondary">See for yourself.</span></h2>
+                    <p class="lead">Another featurette? Of course. More placeholder content here to give you an idea of how this layout would work with some actual real-world content in place.</p>
+                  </div>
+                  <div class="col-md-5 order-md-1">
+                    <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="var(--bs-secondary-bg)"/><text x="50%" y="50%" fill="var(--bs-secondary-color)" dy=".3em">500x500</text></svg>
+                  </div>
+                </div>
+            
+                <hr class="featurette-divider">
+            
+                <div class="row featurette">
+                  <div class="col-md-7">
+                    <h2 class="featurette-heading fw-normal lh-1">And lastly, this one. <span class="text-body-secondary">Checkmate.</span></h2>
+                    <p class="lead">And yes, this is the last block of representative placeholder content. Again, not really intended to be actually read, simply here to give you a better view of what this would look like with some actual content. Your content.</p>
+                  </div>
+                  <div class="col-md-5">
+                    <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="var(--bs-secondary-bg)"/><text x="50%" y="50%" fill="var(--bs-secondary-color)" dy=".3em">500x500</text></svg>
+                  </div>
+                </div>
+            
+                <hr class="featurette-divider">
+        </main>
+        <!--/main-->
+
+        <!--footer-->
+        <footer>
+            <section>
+                <div class="imgfooter">
+                    <a href="index.html"><img src="imagens/logo-removebg-preview.png" alt="logo do site"></a>
+                </div>
+                <div class="midias">
+                    <h3>Midias sociais</h3>
+                    <div class="socialIcons">
+                        <a href=""><i class="fa-brands fa-facebook"></i></a>
+                        <a href=""><i class="fa-brands fa-instagram"></i></a>
+                        <a href=""><i class="fa-brands fa-youtube"></i></a>
+                        <a href=""><i class="fa-brands fa-x-twitter"></i></a>
+                
+                    </div>
+                </div>
+    
+            </section>
+            <p> © 2024 ViagensPeloBrasil - Todos os direitos Reservados</p>
+        </footer>
+        <!--/footer-->
+    <!--/div content-->
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="js/index/script.js" defer></script>
+<script src="js/index/rolagem-divcategoria.js" defer></script>
+<script src="js/index/galeria.js" defer></script>
+<script src="js/index/botoescategoria.js" defer></script>
+<script src="js/index/swiper.js"></script>
+<script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

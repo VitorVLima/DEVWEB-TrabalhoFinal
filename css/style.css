@@ -350,11 +350,12 @@ main section{
 
 .legenda-destaque p{
     text-align: justify;
-    font-size: 1.1em;
+    font-size: 1em;
 }
 
 .legenda-destaque h5{
    visibility: hidden;
+   display: none;
 }
 
 .legenda-destaque a{
@@ -936,6 +937,7 @@ footer p{
     
     .legenda-destaque h5{
         visibility: visible;
+        display: block;
         margin: auto;
         height: 60px;
         background: linear-gradient(to right, darkorange, rgb(177, 89, 30));

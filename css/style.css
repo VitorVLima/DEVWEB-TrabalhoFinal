@@ -333,6 +333,10 @@ main section{
     box-shadow: 1px 1px 1px rgba(8, 20, 8, 0.589);
 }
 
+.destaques h4 a:hover{
+    background-color: chocolate;
+}
+
 .legenda-destaque{
     color: white;
     text-shadow: 1px 1px 1px black;
@@ -346,6 +350,11 @@ main section{
 
 .legenda-destaque p{
     text-align: justify;
+    font-size: 1.1em;
+}
+
+.legenda-destaque h5{
+   visibility: hidden;
 }
 
 .legenda-destaque a{
@@ -354,75 +363,6 @@ main section{
     text-shadow: 1px 1px 1px black;
 }
 
-
-
-
-#featured{
-    justify-content: center;
-}
-
-main #featured .featuredContent{
-    height: 300px;
-    flex: auto;
-    min-width: 100%;
-    display: flex;
-    align-items: end;
-    transition: transform 0.6s ease-in-out;
-    border-radius: 10px;
-    overflow: hidden;
-}
-.featuredContent a{
-    height: 300px;
-    flex: auto;
-    min-width: 100%;
-    display: flex;
-    align-items: end;
-    border: 1px solid black;
-    border-radius: 10px;
-    color: white;
-    text-shadow: 1px 1px 1px black;
-    text-decoration: none;
-    font-size: 0.7em;
-}
-
-
-.featuredContent:hover{
-    transform: scale(1.02);
-
-}
-.featuredContent p{
-    white-space: normal;
-    text-align: justify;
-}
-
-.featuredContent#featured1{
-    background-image: url('../imagens/destinos/lencoismaranhenses2.jpg'); 
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-.featuredContent#featured2{
-    background-image: url('../imagens/destinos/fozdoiguacu1.webp'); 
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-.featuredContent#featured3{
-    background-image: url('../imagens/destinos/riodejaneiro1.jpg'); 
-    background-position: center top;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-   
-
-main section .featuredContent .legend{
-    background-color: rgba(13, 14, 13, 0.479);
-    height: 35%;
-    width: 100%;
-    padding: 10px;
-}
 
 .buttonBar{
     padding-bottom: 20px;
@@ -908,36 +848,131 @@ footer p{
         margin-top: 100px;
         margin-bottom: 20px;
     }
+
+    #firstSection{
+        background-color: rgb(2, 14, 26);
+    }
     
-    main #featured .featuredContent{
-        min-width: 300px;
-    }
-
-    main #featured .featuredContent#featured1{
-      
-        max-width: 49%;
-        
-    }
-
-    main #featured .featuredContent#featured2{
-      
-        max-width: 48%;
-
-    }
-
-    .featuredContent a{
-        height: 300px;
-        flex: auto;
-        min-width: 100%;
+    .destaque {
         display: flex;
-        align-items: end;
-        border: 1px solid black;
+        align-items: center;
+        justify-content: center;
+        max-width: 100%;
+        text-align: center;
+        padding-bottom: 0px;
+        position: relative; /* Necessário para posicionamento absoluto dos filhos */
+        border: 2px solid aliceblue;
+    }
+    
+    .destaque img {
+        max-width: 400px;
+        min-height: 300px;
+        height: auto;
+        margin: auto;
         border-radius: 10px;
+    }
+    
+    .destaque h4 {
+        opacity: 0; /* Inicialmente invisível */
+        visibility: hidden; /* Para evitar cliques quando invisível */
+        transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease; /* Suaviza a transição */
+        position: absolute; 
+        top: 80%; 
+        left: 50%;
+        transform: translate(-50%, 20px); 
+        color: white; 
+        padding: 10px; 
+        border-radius: 10px; 
+    }
+    
+    .destaque:hover h4 {
+        opacity: 0; /* Torna o h4 visível */
+        visibility: hidden; /* Permite interações */
+        display: none;
+        transform: translate(-50%, -50%); /* Move para a posição original */
+    }
+    .destaque h4 a{
+        background: linear-gradient(to right, darkorange,  rgb(177, 89, 30));
+        height: 60px;
+        width: 25%;
+        min-width: 150px;
+        color: #fff;
+        text-shadow: 2px 2px 2px black;
+        font-size: 1.5em;
+        text-decoration: none;
+        display: block;
+        margin: auto;
+        padding-top: 10px;
+        border-radius: 20px;
+        box-shadow: 1px 1px 1px rgba(8, 20, 8, 0.589);
+    }
+    
+    .destaques h4 a:hover{
+        background-color: chocolate;
+    }
+
+    #destaque2{
+        flex-direction: row-reverse;
+    }
+    
+    .legenda-destaque{
         color: white;
         text-shadow: 1px 1px 1px black;
-        text-decoration: none;
-        font-size: 0.8em;
+        font-size: 1.4em;
+       padding: 20px;
+        width: 60%;
+       height: 100%;
+
     }
+    
+    .legenda-destaque h3{
+        padding-bottom: 10px;
+    }
+    
+    .legenda-destaque p{
+        text-align: justify;
+        font-size: 1.2em;
+    }
+    
+    .legenda-destaque h5{
+        visibility: visible;
+        margin: auto;
+        height: 60px;
+        background: linear-gradient(to right, darkorange, rgb(177, 89, 30));
+        min-width: 300px;
+        max-width: 400px;
+        width: 40%;
+        border-radius: 20px;
+        box-shadow: 1px 1px 1px rgba(8, 20, 8, 0.589);
+        margin-top: 20px;
+        }
+        .legenda-destaque h5 a:hover{
+           
+            background: linear-gradient(to right, rgb(70, 41, 7), rgb(177, 89, 30));
+           
+            }
+
+        .legenda-destaque h5 a{
+            visibility: visible;
+            display: block;
+            margin: auto;
+            color: #fff;
+            padding-top: 10px;
+            font-size: 1.5em;
+            background: linear-gradient(to right, darkorange, rgb(177, 89, 30));
+            height: 100%;
+            width: 100%;
+            border-radius: 20px;
+            box-shadow: 1px 1px 1px rgba(8, 20, 8, 0.589);
+
+            }
+    
+    .legenda-destaque a{
+        text-decoration: none;
+        color: #007bff;
+        text-shadow: 1px 1px 1px black;
+    }
+    
 
     #category .categoryItem {
         min-height: 300px; /* Altura mínima para acomodar o conteúdo */

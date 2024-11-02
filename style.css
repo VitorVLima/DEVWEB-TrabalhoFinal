@@ -1,0 +1,21 @@
+carousel-item img {
+    object-fit: cover; /* Faz com que as imagens preencham o espaço */
+    height: 400px; /* Altura fixa para o carrossel */
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: rgba(255, 255, 255, 0.5); /* Cor de fundo dos controles */
+    border-radius: 50%; /* Bordas arredondadas */
+}
+
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+    background-color: rgba(255, 255, 255, 0.8); /* Efeito de hover */
+}
+
+.carousel-inner {
+    border: 2px solid #333; /* Borda ao redor do carrossel */
+    border-radius: 10px; /* Bordas arredondadas */
+    overflow: hidden; /* Esconde partes das imagens que ultrapassam o contêiner */
+}

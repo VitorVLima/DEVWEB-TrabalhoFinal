@@ -606,7 +606,7 @@ main section .featuredContent .legend{
 }
 
 .tips{
-    position: relative
+    position: relative;
     background-image: url('../imagens/dicasdesegurança.jpg');
     background-repeat: no-repeat; 
     background-position: center center;
@@ -624,6 +624,22 @@ main section .featuredContent .legend{
     padding: 30px;
     font-family: "Bebas Neue", sans-serif;
     border:  1px solid #007bff;
+}
+
+.tips::before {
+    content: ""; /* Adicione esta linha */
+    position: absolute; /* Adicione esta linha */
+    top: 0; /* Adicione esta linha */
+    left: 0; /* Adicione esta linha */
+    right: 0; /* Adicione esta linha */
+    bottom: 0; /* Adicione esta linha */
+    background-color: rgba(0, 0, 0, 0.5); /* Ajuste a opacidade aqui */
+    z-index: 1; /* Adicione esta linha */
+}
+
+.tips > * {
+    position: relative; /* Adicione esta linha para os filhos ficarem acima do pseudo-elemento */
+    z-index: 2; /* Adicione esta linha */
 }
 
 .tips h3{

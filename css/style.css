@@ -297,25 +297,25 @@ main section{
     height: 300px;
     margin: auto;
     border-radius: 10px;
-    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.479);
 }
 
 .destaque h4 {
-    opacity: 0; 
-    visibility: hidden; 
-    transition: opacity 0.3s ease, visibility 0.3s ease; 
+    opacity: 0; /* Inicialmente invisível */
+    visibility: hidden; /* Para evitar cliques quando invisível */
+    transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease; /* Suaviza a transição */
     position: absolute; 
-    top: 50%; 
-    left: 50%; 
-    transform: translate(-50%, 50%); 
+    top: 80%; 
+    left: 50%;
+    transform: translate(-50%, 20px); 
     color: white; 
-    padding: 10px;
+    padding: 10px; 
     border-radius: 10px; 
 }
 
 .destaque:hover h4 {
     opacity: 1; /* Torna o h4 visível */
     visibility: visible; /* Permite interações */
+    transform: translate(-50%, -50%); /* Move para a posição original */
 }
 .destaque h4 a{
     background: linear-gradient(to right, darkorange,  rgb(177, 89, 30));

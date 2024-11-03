@@ -571,6 +571,7 @@ main section{
 }
 
 .gallery img{
+    width: 100%;
     max-width: 500px;
     height: 350px;
 }
@@ -838,7 +839,7 @@ footer p{
         max-width: 1200px;
         margin: auto;
         margin-top: -60px;
-        
+        font-size: 1em;
         overflow: hidden;
     }
 

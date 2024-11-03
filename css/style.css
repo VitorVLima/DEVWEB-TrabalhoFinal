@@ -401,8 +401,10 @@ main section{
 #category .category{
     display: none;
     flex-direction: row;
+    flex-wrap: wrap;
     align-items: center;
-    gap: 10px;
+    justify-content: center;
+    gap: 30px;
     width: 100%;
     scroll-behavior: smooth; 
     overflow-x: auto; /* Adiciona rolagem horizontal */
@@ -413,7 +415,6 @@ main section{
 }
 
 #category .category.mountain{
-    box-shadow: inset 2px 2px 5px black;
     padding: 20px;
     background-color: aliceblue;
     border: 1px solid rgba(30, 143, 255, 0.568);
@@ -422,7 +423,7 @@ main section{
 }
 
 #category .category.family{
-    box-shadow: inset 2px 2px 5px black;
+  
     padding: 20px;
     background-color: aliceblue;
     border: 1px solid rgba(30, 143, 255, 0.568);
@@ -436,14 +437,13 @@ main section{
 
 #category .category.beach{
 
-    box-shadow: inset 2px 2px 5px black;
     padding: 20px;
     background-color: aliceblue;
     border: 1px solid rgba(30, 143, 255, 0.568);
 }
 
 #category .category.historicalCity{
-    box-shadow: inset 2px 2px 5px black;
+   
     padding: 20px;
     background-color: aliceblue;
     border: 1px solid rgba(30, 143, 255, 0.568);
@@ -452,12 +452,12 @@ main section{
 
 #category .categoryItem img{
     width: 100%;
-    height: 110px;
+    height: 50%;
 }
 
 #category .categoryItem {
-    min-height: 300px; /* Altura mínima para acomodar o conteúdo */
-    width: 178px;
+    height: 400px;
+    width: 300px;
     box-shadow: 2px 2px 10px black;
     flex-shrink: 0;
     display: flex;
@@ -476,7 +476,6 @@ main section{
     width: 100%;
     height: 100%;
     text-decoration: none;
-    border: 1px solid black;
     min-height: 300px; /* Altura mínima para acomodar o conteúdo */
 
     border-radius: 10px 10px 10px 10px;
@@ -487,9 +486,9 @@ main section{
 
 #category .categoryItem .itemDescription {
     padding: 5px;
-  
+
     width: 100%;
-    font-size: 0.7em;
+    font-size: 1em;
     flex-grow: 1; /* Permite que cresça */
     display: flex;
     flex-direction: column; /* Para empilhar elementos */
@@ -975,23 +974,31 @@ footer p{
         text-decoration: none;
         color: #007bff;
         text-shadow: 1px 1px 1px black;
+    
     }
     
 
     #category .categoryItem {
-        min-height: 300px; /* Altura mínima para acomodar o conteúdo */
-        width: 219px;
+        height: 400px;
+        width: 30%;
+        min-width: 300px;
     }
 
         
     #category .categoryItem img{
         width: 100%;
-        height: 120px;
+        height: 50%;
     }
 
     #category .categoryItem .itemDescription {
-        font-size: 0.8em;
+        font-size: 1em;
+        height: 50%;
      
+    }
+
+    #category .categoryItem a{
+        width: 100%;
+        height: 100%;
     }
 
     .mainGallery p{

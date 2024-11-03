@@ -293,6 +293,7 @@ main section{
     width: 100%;
     display: flex;
     flex-direction: column;
+    margin-bottom: 100px;
 }
 
 .destaque {
@@ -515,8 +516,8 @@ main section{
 #allDestinations{
     padding:0;
     height: 70px;
-    margin-bottom: 40px;
-    margin-top: 50px;
+    margin-bottom: 80px;
+    margin-top: 80px;
 }
 
 #allDestinations h3{
@@ -581,6 +582,7 @@ main section{
     padding: 0;
     padding-bottom: 50px;
     padding-top: 30px;
+    margin-bottom: 100px;
 }
 
 .mainGallery p{
@@ -854,7 +856,7 @@ footer p{
         font-weight: 800;
         padding: 20px;
         padding-top: 30px;
-        margin-top: 100px;
+        margin-top: 20px;
         margin-bottom: 20px;
     }
 

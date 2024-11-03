@@ -14,6 +14,7 @@
 main .contentDest{
     padding: 20px;
     text-align: justify;
+    margin-bottom: 50px;
 }
 
 main .contentDest figure{
@@ -59,6 +60,10 @@ main .link a{
 main .link a:hover{
     background-color: rgb(10, 99, 189);
     text-decoration: underline;
+}
+
+#map{
+    margin-bottom: 100px;
 }
 
 

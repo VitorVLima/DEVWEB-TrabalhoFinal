@@ -10,14 +10,26 @@
         <title>Sobre Nós</title>
         <style>
 
-            main{
+            main {
+                position: relative;
                 background-color: rgb(2, 14, 26);
                 color: aliceblue;
+            }
+
+            main::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
                 background-image: url("../imagens/favicon-removebg-preview.png");
                 background-repeat: no-repeat;
                 background-position: center 200px;
-
+                opacity: 0.3; /* Ajuste a opacidade aqui */
+                z-index: -1; /* Para ficar atrás do conteúdo */
             }
+        
         </style>
     </head>
 

@@ -19,6 +19,6 @@
 }
 
 .content a:hover{
-    color: rgb(8, 45, 82);
+    color: darkorange;
     text-shadow: 1px 1px 1px black;
 }

@@ -74,8 +74,8 @@ body{
 }
 
 #sidebar .sidebarItem  a:hover{
-    color: #0254ac;
-    text-decoration: underline;
+    color: darkorange;
+
 }
 
 #sidebar .sidebarSubItems{
@@ -84,10 +84,12 @@ body{
     flex-direction: column;
     gap: 5px;
     color: #fff;
-    
+    text-decoration: none;
     padding: 20px;
     border-top: 2px solid #007bff;
     font-size: 20px;
+    background-color: #fff;
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.116);
 }
 
 #sidebar .socialIcon{
@@ -107,7 +109,7 @@ body{
 
 #sidebar .socialIcon a:hover{
 
-    color: #0254ac;
+    color: darkgoldenrod;
 }
 
 

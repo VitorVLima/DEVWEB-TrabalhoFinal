@@ -578,6 +578,7 @@ main section{
 
 .mainGallery{
     background-color: dodgerblue;
+    padding: 0;
     padding-bottom: 50px;
     padding-top: 30px;
 }

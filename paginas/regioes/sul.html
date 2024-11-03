@@ -8,6 +8,28 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
         <link rel="shortcut icon" href="../../imagens/logo-removebg-preview.png" type="image/x-icon">
         <title>Sul</title>
+        <style>
+            main {
+                   position: relative;
+                   background-color: rgb(2, 14, 26);
+                   color: aliceblue;
+               }
+   
+               main::before {
+                   content: '';
+                   position: absolute;
+                   top: 0;
+                   left: 0;
+                   right: 0;
+                   bottom: 0;
+                   background-image: url("../../imagens/capasul.jpg");
+                   background-repeat: no-repeat;
+                   background-position: center center;
+                   background-attachment: fixed;
+                   opacity: 0.3; /* Ajuste a opacidade aqui */
+                   z-index: -1; /* Para ficar atrás do conteúdo */
+               }
+       </style>
     </head>
 <body>
     <div class="container">

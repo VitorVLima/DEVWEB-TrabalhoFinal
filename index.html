@@ -111,11 +111,11 @@
 
         <!--main-->
           <main>
-            <h2 class="subtitle" id="firstTitle">
+            <h2 class="subtitle invisible" id="firstTitle">
                 Destaques
             </h2>
             
-            <section id="firstSection"> <!--sessão de destaques-->
+            <section id="firstSection" class="invisible"> <!--sessão de destaques-->
                 <div class="destaque">
                     <div class="legenda-destaque">
                         <h3><a href="paginas/destinos/lencoismaranhenses.html">Lençóis Maranhenses (MA)</a></h3>
@@ -154,10 +154,10 @@
             </section>
 
 
-            <h2>Categorias</h2>
+            <h2 class="invisible">Categorias</h2>
 
             
-            <section id="category">
+            <section id="category" class="invisible">
 
 
                 <div class="buttonBar">
@@ -439,11 +439,11 @@
             </section>
     
 
-            <section id="allDestinations">
+            <section id="allDestinations" class="invisible">
                 <h3><a href="paginas/todososdestinos.html">Todos os destinos</a></h2>
             </section>
 
-        <div class="mainGallery">
+        <section class="mainGallery invisible">
             <h2 id="galleryTitle">Galeria</h2>
             <p>Explore a beleza diversificada do Brasil através da nossa galeria de imagens, que destaca alguns dos mais icônicos pontos turísticos do país. Cada imagem captura não apenas a essência do local, mas também a rica cultura e história que fazem do Brasil um destino imperdível.</p>
             <div class="gallery">
@@ -455,20 +455,20 @@
                 <img src="imagens/praiadosancho.jpg" alt="">
             </div>
             <h3><a href="paginas/galeria.html">Ver Galeria</a></h3>
-        </div>
-            <h2>Dicas para suas Viagens</h2>
-            <div class="tips">
+        </section>
+            <h2 class="invisible">Dicas para suas Viagens</h2>
+            <section class="tips invisible">
                 <h3>Quer aproveitar as suas férias ao máximo e se manter seguro e por dentro de todas as atrações? confira nossas dicas.</h3>
                 <div>
                     <a href="paginas/dicasdeviagens.html">Leia mais</a> <!--link para a sessão de dicas para as viagens-->
                 </div>
-            </div>
+            </section>
         </main>
         <!--/main-->
 
         <!--footer-->
         <footer>
-            <section>
+            <section class="invisible">
                 <div class="imgfooter">
                     <a href="index.html"><img src="imagens/logo-removebg-preview.png" alt="logo do site"></a>
                 </div>
@@ -494,6 +494,7 @@
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 <script src="js/index/script.js" defer></script>
 <script src="js/index/galeria.js" defer></script>
+<script src="js/index/sectionVisible.js"></script>
 <script src="js/index/botoescategoria.js" defer></script>
 <script src="js/index/swiper.js"></script>
 </body>

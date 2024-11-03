@@ -458,6 +458,8 @@ main section{
     height: 47%;
 }
 
+
+
 #category .categoryItem {
     height: 420px;
     width: 300px;
@@ -468,11 +470,17 @@ main section{
     gap: 5px;
     border-radius: 10px 10px 10px 10px;
     background-color: #fff;
+    transition: transform 0.5s ease;
 
 }
 
 .category .categoryItem:hover{
     transform: scale(1.02);
+    box-shadow: 2px 2px 5px darkorange;
+}
+
+.category .categoryItem  p{
+    color: black;
 }
 
 .category .categoryItem a{
@@ -498,8 +506,8 @@ main section{
     justify-content: flex-start; /* Alinha no início */
 }
 
-#category .categoryItem .itemDescription:hover {
-    text-decoration: underline;
+#category .categoryItem .itemDescription h3:hover {
+    color: darkorange;
 }
 
 #category .categoryItem .itemDescription h3{

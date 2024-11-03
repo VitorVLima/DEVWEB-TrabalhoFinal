@@ -224,7 +224,7 @@ header  #searchButton{
 .invisible {
     opacity: 0; /* Inicialmente invisível */
     transform: translateY(30px); /* Deslocado para baixo */
-    transition: opacity 0.3s ease, transform 0.3s ease; /* Suaviza a transição */
+    transition: opacity 1s ease, transform 1s ease; /* Suaviza a transição */
 }
 
 .visible{

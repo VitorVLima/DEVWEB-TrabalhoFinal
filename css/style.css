@@ -279,15 +279,6 @@ main h2::before{
     transform: translateX(-50%);
 }
 
-.titulo{
-    background-color: #fff;
-    padding-top: 30px;
-}
-
-.titulo h2{
-    margin: 0;
-}
-
 main section{
     display: flex;
     flex-direction: row;
@@ -437,14 +428,29 @@ main section{
 
 }
 
-#category .category.family, .category.beach, .category.historicalCity{
-    background-color: rgb(2, 14, 26);
+#category .category.beach{
+    background-color: rgb(201, 201, 12);
+    padding: 30px;
+}
+
+#category .category.family{
+    background-color: dodgerblue;
+    padding: 30px;
+}
+
+#category .category.family h2{
+    color: #fff;
+
+}
+
+#category .category.historicalCity{
+    background-color: rgb(2, 14, 26);;
     padding: 30px;
 }
 
 #category .category.mountain{
     display: flex;
-    background-color: rgb(2, 14, 26);
+    background-color: darkgreen;
     padding: 30px;
 }
 

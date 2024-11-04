@@ -256,9 +256,10 @@ main h2{
     position: relative;
     text-align: center;
     padding: 20px;
-    padding-top: 30px;
+    padding-top: 40px;
     margin-top: 20px;
     margin-bottom: 20px;
+
 }
 
 main h2::before{
@@ -278,7 +279,14 @@ main h2::before{
     transform: translateX(-50%);
 }
 
+.titulo{
+    background-color: #fff;
+    padding-top: 30px;
+}
 
+.titulo h2{
+    margin: 0;
+}
 
 main section{
     display: flex;

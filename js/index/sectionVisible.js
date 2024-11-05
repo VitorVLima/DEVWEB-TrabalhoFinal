@@ -4,13 +4,13 @@ document.addEventListener("DOMContentLoaded", function() {
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                entry.target.classList.add('visible'); // Adiciona a classe 'visible'
-                observer.unobserve(entry.target); // Para observar novamente
+                entry.target.classList.add('visible');
+                observer.unobserve(entry.target);
             }
         });
     });
 
     sections.forEach(section => {
-        observer.observe(section); // Começa a observar cada destaque
+        observer.observe(section); 
     });
 });

@@ -68,4 +68,4 @@ document.getElementById('submitComment').addEventListener('click', function() {
 });
 
 // Carrega os comentários ao iniciar a página
-loadComments();
+loadComments();Comments(); // Atualiza os comentários após a exclusão

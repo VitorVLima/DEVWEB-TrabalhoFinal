@@ -35,14 +35,19 @@ function initializeSidebar() {
     });
 
     destinosButton.addEventListener('click', function() {
-        sidebarSubItems.style.display = (sidebarSubItems.style.display === 'none' || sidebarSubItems.style.display === '') ? 'flex' : 'none';
+        // Verifica se o submenu está oculto (display 'none') ou sem estilo de display
+        if (sidebarSubItems.style.display === 'none') {
+            sidebarSubItems.style.display = 'flex';
+        } else {
+            sidebarSubItems.style.display = 'none';
+        }
     });
 
     window.addEventListener('resize', function() {
         if (window.innerWidth > 769) {
             sidebar.classList.remove('show'); // Remove a classe em telas maiores
             sidebar.style.display = 'none'; // Oculta totalmente
-            sidebar.style.opacity = '1'; // Reseta a opacidade para futuras aberturas
+            sidebar.style.opacity = '0'; // Reseta a opacidade para futuras aberturas
             sidebarSubItems.style.display = 'none';
         }
     });

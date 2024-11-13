@@ -10,6 +10,8 @@
         <title>Fale Conosco</title>
         <style>
             main{
+                background-color: rgb(2, 14, 26);
+                color: aliceblue;
                 padding: 10px;
             }
         </style>
@@ -84,9 +86,9 @@
                             <label for="password">Senha:</label>
                             <input type="password" id="password" name="password" required>
 
-                            <button type="submit">Entrar</button>
+                            <button type="submit" class="submitLogin">Entrar</button>
                         </form>
-                        <p>Ainda não tem uma conta?<br> <span id="goToSignup">Cadastre-se aqui</span></p>
+                        <p>Ainda não tem uma conta?<br> <br><span class="login" id="goToSignup">Cadastre-se</span></p>
                     </div>
                 </div>
 
@@ -98,22 +100,23 @@
                         <form id="signupForm">
                             <label for="newUsername">Usuário:</label>
                             <input type="text" id="newUsername" name="newUsername" required>
-
+                            <label for="newUsername">Email:</label>
+                            <input type="email" name="newEmail" id="newEmail" required>
                             <label for="newPassword">Senha:</label>
                             <input type="password" id="newPassword" name="newPassword" required>
 
-                            <button type="submit">Cadastrar</button>
+                            <button type="submit" class="submitLogin">Cadastrar</button>
                         </form>
-                        <p>Já tem uma conta? <br> <span id="goToLogin">Faça login aqui</span></p>
+                        <p>Já tem uma conta? <br><br> <span class="login" id="goToLogin"> Fazer Login</span></p>
                     </div>
                 </div>
 
                 <!-- Seção de comentários (inicialmente oculta) -->
                 <div id="commentSection" style="display:none;">
-                    <h3>Comentários</h3>
-                    <div id="commentsContainer"></div>
                     <textarea id="commentInput" placeholder="Deixe seu comentário aqui..."></textarea>
                     <button id="postCommentButton">Postar Comentário</button>
+                    <h3>Comentários</h3>
+                    <div id="commentsContainer"></div>
                 </div>
 
                 

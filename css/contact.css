@@ -49,6 +49,7 @@ main button {
     padding: 10px 20px;
     font-size: 16px;
     background: linear-gradient(to right, darkorange,  rgb(177, 89, 30));
+    text-shadow: 2px 2px 2px black;
     color: aliceblue;
     border: none;
     border-radius: 5px;
@@ -122,12 +123,21 @@ textarea {
     margin-top: 20px;
     display: flex;
     flex-direction: column;
+    padding: 20px;
+    border: 2px solid aliceblue;
 }
 
-#commentSection {
+#commentSection h3{
+    color: dodgerblue;
+    text-shadow: 2px 2px 2px black;
+    padding: 30px;
+    font-size: 1.3em;
+}
+
+#commentInput{
     margin-top: 20px;
-    display: flex;
-    flex-direction: column;
+    height: 100px;
+    width: 300px;
 }
 
 
@@ -137,21 +147,25 @@ textarea {
 }
 
 .comment {
-    background-color: #f1f1f1;
+    background-color: rgb(2, 14, 26);
     padding: 10px;
     margin-bottom: 10px;
     border-radius: 5px;
     border: 1px solid #ddd;
+    position: relative;
 }
 
 #postCommentButton {
     background: linear-gradient(to right, darkorange,  rgb(177, 89, 30));
+    text-shadow: 2px 2px 2px black;
     color: white;
     border: none;
     padding: 10px;
     font-size: 16px;
     cursor: pointer;
     border-radius: 5px;
+    display: block;
+    margin-bottom: 69px;
 }
 
 #postCommentButton:hover {
@@ -181,6 +195,7 @@ form .formItem{
 form #submit{
     border-radius: 10px;
     background: linear-gradient(to right, darkorange,  rgb(177, 89, 30));
+    text-shadow: 2px 2px 2px black;
     color: white;
     font-size: 1.5em;
     cursor: pointer;
@@ -192,6 +207,7 @@ form #submit:hover{
 
 form #submitComment{
     background: linear-gradient(to right, darkorange,  rgb(177, 89, 30));
+    text-shadow: 2px 2px 2px black;
     color: white;
     font-size: 1.2em;
     max-width: 200px;
@@ -241,6 +257,47 @@ form #submitComment:hover{
 
 #loginButton{
     margin: 20px;
+}
+
+.deleteCommentButton {
+    background-color: #f44336;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    margin-left: 10px;
+    cursor: pointer;
+    border-radius: 4px;
+    position: absolute; /* Posiciona o botão no canto direito */
+    top: 10px;
+    right: 10px;
+}
+
+.deleteCommentButton:hover {
+    background-color: #e53935;
+}
+
+/* Título de comentários */
+h3 {
+    font-size: 24px;
+    font-family: 'Arial', sans-serif;
+    color: #333;
+}
+
+.deleteCommentButton {
+    background-color: #f44336;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    margin-left: 10px;
+    cursor: pointer;
+    border-radius: 4px;
+    position: absolute; /* Posiciona o botão no canto direito */
+    top: 10px;
+    right: 10px;
+}
+
+.deleteCommentButton:hover {
+    background-color: #e53935;
 }
 
 

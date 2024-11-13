@@ -49,7 +49,7 @@ main button {
     padding: 10px 20px;
     font-size: 16px;
     background: linear-gradient(to right, darkorange,  rgb(177, 89, 30));
-    color: white;
+    color: aliceblue;
     border: none;
     border-radius: 5px;
     cursor: pointer;
@@ -74,7 +74,7 @@ main button:hover {
 
 .modal-content {
     background-color: rgb(2, 14, 26);
-    margin: 4% auto;
+    margin: 9% auto;
     padding: 20px;
     border-radius: 5px;
     width: 90%;
@@ -91,7 +91,7 @@ main button:hover {
 
 .close:hover,
 .close:focus {
-    color: black;
+    color: darkorange;
     text-decoration: none;
     cursor: pointer;
 }
@@ -120,10 +120,20 @@ textarea {
 
 #commentSection {
     margin-top: 20px;
+    display: flex;
+    flex-direction: column;
 }
+
+#commentSection {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
 
 #commentsContainer {
     margin-bottom: 15px;
+    background-color: rgb(2, 14, 26);
 }
 
 .comment {
@@ -155,16 +165,16 @@ form{
     margin: auto;
     background-color: rgb(2, 14, 26);
     border: 2px solid aliceblue;
-    padding: 20px;
+   
 
 }
 
 form .formItem{
 
-    width: 70%;
+    width: 90%;
     border-radius: 5px;
     min-width: 200px;
-    max-width: 400px;
+    margin-top: -20px;
     padding: 10px;
 }
 
@@ -186,7 +196,7 @@ form #submitComment{
     font-size: 1.2em;
     max-width: 200px;
     cursor: pointer;
-    margin-top: 20px;
+   
 }
 
 form #submitComment:hover{
@@ -195,6 +205,10 @@ form #submitComment:hover{
 
 .modal h2{
     font-size: 2.4em;
+}
+
+.modal p {
+    padding-top: 5px;
 }
 
 .login{
@@ -214,4 +228,29 @@ form #submitComment:hover{
 
 .submitLogin{
     margin-top: 20px;
+}
+
+#form{
+    align-items: center;
+    width: 90%;
+    max-width: 600px;
+    gap: 5px;
+    padding-top: 50px;
+    margin-top: 30px;
+}
+
+#loginButton{
+    margin: 20px;
+}
+
+
+@media screen and (min-width: 769px){
+    .modal-content {
+        background-color: rgb(2, 14, 26);
+        margin: 4% auto;
+        padding: 20px;
+        border-radius: 5px;
+        width: 90%;
+        max-width: 400px;
+    }
 }

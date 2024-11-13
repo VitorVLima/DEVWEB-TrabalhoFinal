@@ -1,71 +1,116 @@
-function loadComments() {
-    const comments = JSON.parse(localStorage.getItem('comments')) || [];
-    comments.forEach(({ username, text }) => {
-        displayComment(username, text);
-    });
-}
+// Elementos DOM
+const loginButton = document.getElementById("loginButton");
+const loginModal = document.getElementById("loginModal");
+const signupModal = document.getElementById("signupModal");
+const closeButton = document.getElementById("closeButton");
+const closeSignupButton = document.getElementById("closeSignupButton");
+const goToSignup = document.getElementById("goToSignup");
+const goToLogin = document.getElementById("goToLogin");
+const loginForm = document.getElementById("loginForm");
+const signupForm = document.getElementById("signupForm");
+const commentSection = document.getElementById("commentSection");
+const commentInput = document.getElementById("commentInput");
+const postCommentButton = document.getElementById("postCommentButton");
+const commentsContainer = document.getElementById("commentsContainer");
 
-function displayComment(username, commentText) {
-    const commentsList = document.getElementById('commentsList');
-    const newComment = document.createElement('div');
-    newComment.classList.add('comment');
+// Variáveis globais
+let currentUser = null;
 
-    // Adicionando o username
-    newComment.textContent = ` ${username}: `;
-    
-    // Criando a quebra de linha e o texto do comentário
-    const br = document.createElement('br');
-    newComment.appendChild(br);
-    newComment.appendChild(document.createTextNode(commentText));
+// Abrir a tela de login
+loginButton.addEventListener("click", () => {
+    loginModal.style.display = "block";
+});
 
-    // Criar botão de exclusão
-    const deleteButton = document.createElement('button');
-    deleteButton.setAttribute('id', 'delete');
-    deleteButton.textContent = 'Excluir';
-    deleteButton.onclick = function() {
-        deleteComment(username, commentText);
-    };
+// Fechar a tela de login
+closeButton.addEventListener("click", () => {
+    loginModal.style.display = "none";
+});
 
-    newComment.appendChild(deleteButton);
-    commentsList.appendChild(newComment);
-}
+// Abrir a tela de cadastro a partir do login
+goToSignup.addEventListener("click", () => {
+    loginModal.style.display = "none";
+    signupModal.style.display = "block";
+});
 
+// Fechar a tela de cadastro
+closeSignupButton.addEventListener("click", () => {
+    signupModal.style.display = "none";
+});
 
+// Voltar para a tela de login
+goToLogin.addEventListener("click", () => {
+    signupModal.style.display = "none";
+    loginModal.style.display = "block";
+});
 
+// Função de cadastro
+signupForm.addEventListener("submit", (event) => {
+    event.preventDefault();
 
-function deleteComment(username, commentText) {
-    const comments = JSON.parse(localStorage.getItem('comments')) || [];
-    const updatedComments = comments.filter(comment => 
-        !(comment.username === username && comment.text === commentText)
-    );
-    localStorage.setItem('comments', JSON.stringify(updatedComments));
-    reloadComments();
-}
+    const newUsername = document.getElementById("newUsername").value;
+    const newPassword = document.getElementById("newPassword").value;
 
-function reloadComments() {
-    const commentsList = document.getElementById('commentsList');
-    commentsList.innerHTML = ''; // Limpa a lista atual
-    loadComments(); // Carrega os comentários atualizados
-}
+    // Armazenar o usuário e senha no localStorage
+    localStorage.setItem("username", newUsername);
+    localStorage.setItem("password", newPassword);
 
-document.getElementById('submitComment').addEventListener('click', function() {
-    const usernameInput = document.getElementById('usernameInput');
-    const commentInput = document.getElementById('commentInput');
-    const username = usernameInput.value.trim();
-    const commentText = commentInput.value.trim();
+    alert("Cadastro realizado com sucesso!");
+    signupModal.style.display = "none"; // Fecha a tela de cadastro
+    loginModal.style.display = "block"; // Volta para a tela de login
+});
 
-    if (username && commentText) {
-        const comments = JSON.parse(localStorage.getItem('comments')) || [];
-        comments.push({ username, text: commentText });
-        localStorage.setItem('comments', JSON.stringify(comments));
+// Função de login
+loginForm.addEventListener("submit", (event) => {
+    event.preventDefault();
 
-        displayComment(username, commentText);
-        usernameInput.value = ''; // Limpa o campo de entrada do nome
-        commentInput.value = ''; // Limpa o campo de entrada do comentário
+    const username = document.getElementById("username").value;
+    const password = document.getElementById("password").value;
+
+    // Verifica se as credenciais correspondem ao cadastro
+    const storedUsername = localStorage.getItem("username");
+    const storedPassword = localStorage.getItem("password");
+
+    if (username === storedUsername && password === storedPassword) {
+        currentUser = username;
+        alert("Login bem-sucedido!");
+        loginModal.style.display = "none"; // Fecha a tela de login
+        commentSection.style.display = "block"; // Exibe a seção de comentários
+        loadComments(); // Carregar os comentários existentes
     } else {
-        alert('Por favor, preencha seu nome e o comentário.');
+        alert("Usuário ou senha incorretos.");
     }
 });
 
-// Carrega os comentários ao iniciar a página
-loadComments();Comments(); // Atualiza os comentários após a exclusão
+// Função para adicionar um comentário
+postCommentButton.addEventListener("click", () => {
+    const commentText = commentInput.value;
+    if (commentText.trim() !== "") {
+        const comment = {
+            username: currentUser,
+            text: commentText,
+        };
+
+        // Armazenar o comentário no localStorage
+        let comments = JSON.parse(localStorage.getItem("comments")) || [];
+        comments.push(comment);
+        localStorage.setItem("comments", JSON.stringify(comments));
+
+        // Limpar o campo de comentário e recarregar os comentários
+        commentInput.value = "";
+        loadComments();
+    }
+});
+
+// Função para carregar os comentários armazenados
+function loadComments() {
+    commentsContainer.innerHTML = ""; // Limpar comentários anteriores
+
+    let comments = JSON.parse(localStorage.getItem("comments")) || [];
+
+    comments.forEach(comment => {
+        const commentElement = document.createElement("div");
+        commentElement.classList.add("comment");
+        commentElement.innerHTML = `<strong>${comment.username}</strong>: ${comment.text}`;
+        commentsContainer.appendChild(commentElement);
+    });
+}
